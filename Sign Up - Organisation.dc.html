@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#600C90">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#600C90"/>
+    <text x="600" y="470" font-family="Plus Jakarta Sans, sans-serif" font-size="320" font-weight="800" fill="#FFC02E" text-anchor="middle">G</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Manrope',sans-serif}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  input::placeholder{color:#B7A6C9}
+  @media (max-width:820px){
+    .gm-signup-grid{grid-template-columns:1fr !important}
+    .gm-signup-left{display:none !important}
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:grid;grid-template-columns:0.9fr 1.1fr;background:#fff" class="gm-signup-grid">
+
+  <!-- LEFT PANEL -->
+  <div style="position:relative;background:linear-gradient(160deg,#4B0A77 0%,#600C90 55%,#7A189A 100%);color:#fff;overflow:hidden;padding:40px" class="gm-signup-left">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-100px;right:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.35),transparent 70%)"></div>
+    <div style="position:absolute;bottom:60px;left:40px;width:150px;height:150px;border:1.5px dashed rgba(255,255,255,0.28);border-radius:50%"></div>
+
+    <div style="position:relative">
+      <a href="Home.dc.html" style="background:#fff;display:inline-block;padding:9px 13px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:28px;width:auto;display:block"></a>
+      <p style="font-style:italic;font-weight:700;font-size:26px;color:#FFC02E;margin:64px 0 0;max-width:340px;line-height:1.4">Empower your organisation.<br>Scale learning for your team.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.75);margin-top:16px;max-width:320px;line-height:1.6">Bring Gamai's e-content, assessments and tutoring to your schools, staff or members — all under one account.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL / FORM -->
+  <div style="display:flex;align-items:center;justify-content:center;padding:56px 40px">
+    <div style="max-width:420px;width:100%">
+      <h1 style="font-family:'Plus Jakarta Sans';font-size:30px;font-weight:800;color:#211633;margin:0">Sign Up</h1>
+      <div style="font-size:14px;font-weight:700;color:#600C90;margin-top:4px">as Organisation</div>
+
+      <div style="margin-top:20px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Institution Name</label>
+        <input ref="{{ institutionNameRef }}" placeholder="Bright Future Academy" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Full Name</label>
+        <input placeholder="Input text" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Email address</label>
+        <input placeholder="you@organisation.com" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Phone</label>
+        <input placeholder="Input text" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Preferred Url</label>
+        <input placeholder="Input text" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Password</label>
+        <input type="password" placeholder="Password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+<a href="Dashboard - Organization.dc.html" onClick="{{ handleCreate }}" style="display:block;text-align:center;width:100%;margin-top:22px;border:none;background:#FB8C18;color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px;padding:14px;border-radius:12px;cursor:pointer" style-hover="background:#600C90">Sign Up</a>
+
+      <p style="text-align:center;font-size:14px;color:#5C5470;margin-top:18px">Already Have an account? <a href="#" style="color:#600C90;font-weight:700" style-hover="color:#FB8C18">Sign In</a></p>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  institutionNameRef = React.createRef();
+  renderVals() {
+    return {
+      institutionNameRef: this.institutionNameRef,
+      handleCreate: (e) => {
+        e.preventDefault();
+        const name = (this.institutionNameRef.current && this.institutionNameRef.current.value.trim()) || "";
+        localStorage.setItem("gamai_session", JSON.stringify({ name, role: "organization" }));
+        const q = name ? `?institutionName=${encodeURIComponent(name)}` : "";
+        window.location.href = `Dashboard - Organization.dc.html${q}`;
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
