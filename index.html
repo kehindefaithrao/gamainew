@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#600C90">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#600C90"/>
+    <text x="600" y="470" font-family="Plus Jakarta Sans, sans-serif" font-size="320" font-weight="800" fill="#FFC02E" text-anchor="middle">G</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  a:link, a:visited{color:inherit}
+  a:hover{color:#FFC02E}
+  ::selection{background:#FFC02E;color:#3C0960}
+  summary{list-style:none;cursor:pointer}
+  summary::-webkit-details-marker{display:none}
+  image-slot{display:block}
+  input,textarea{font-family:'Manrope',sans-serif}
+  input::placeholder{color:#B7A6C9}
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  summary{list-style:none}
+  summary::-webkit-details-marker{display:none}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes pulseRing{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.8);opacity:0}}
+  @keyframes heroSlideRight{0%,15%{transform:translateX(0)}20%,35%{transform:translateX(-20%)}40%,55%{transform:translateX(-40%)}60%,75%{transform:translateX(-60%)}80%,100%{transform:translateX(-80%)}}
+  image-slot{display:block}
+  .gm-home-nav-toggle{display:none}
+  @media (max-width:900px){
+    .gm-home-nav-links, .gm-home-nav-auth{display:none !important}
+    .gm-home-nav-toggle{display:flex !important}
+    .gm-home-hero-grid{grid-template-columns:1fr !important;padding-bottom:52px !important}
+    .gm-home-hero-title{font-size:42px !important}
+    .gm-home-cv-grid{grid-template-columns:repeat(2,1fr) !important}
+    .gm-home-eco-grid{grid-template-columns:repeat(2,1fr) !important}
+    .gm-home-impact-grid{grid-template-columns:1fr !important}
+    .gm-home-tutor-grid{grid-template-columns:1fr !important}
+    .gm-home-courses-grid{grid-template-columns:repeat(2,1fr) !important}
+    .gm-home-exam-grid{grid-template-columns:1fr !important;text-align:left}
+    .gm-home-footer-grid{grid-template-columns:1fr 1fr !important}
+  }
+  @media (max-width:600px){
+    .gm-home-hero-title{font-size:32px !important}
+    .gm-home-hero-search-row{flex-direction:column !important}
+    .gm-home-cv-grid{grid-template-columns:1fr !important}
+    .gm-home-eco-grid{grid-template-columns:1fr !important}
+    .gm-home-courses-grid{grid-template-columns:1fr !important}
+    .gm-home-footer-grid{grid-template-columns:1fr !important}
+    .gm-home-cv-lead{white-space:normal !important}
+    section{padding-left:20px !important;padding-right:20px !important}
+  }
+
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  summary{list-style:none}
+  summary::-webkit-details-marker{display:none}
+  image-slot{display:block}
+  .gm-courses-nav-toggle{display:none}
+  @media (max-width:900px){
+    .gm-courses-nav-links, .gm-courses-nav-auth{display:none !important}
+    .gm-courses-nav-toggle{display:flex !important}
+    .gm-courses-courses-grid{grid-template-columns:repeat(2,1fr) !important}
+    .gm-courses-paths-grid{grid-template-columns:repeat(2,1fr) !important}
+    .gm-courses-footer-grid{grid-template-columns:1fr 1fr !important}
+    .gm-courses-hero-title{font-size:38px !important}
+  }
+  @media (max-width:600px){
+    .gm-courses-courses-grid{grid-template-columns:1fr !important}
+    .gm-courses-paths-grid{grid-template-columns:1fr !important}
+    .gm-courses-footer-grid{grid-template-columns:1fr !important}
+    .gm-courses-hero-title{font-size:30px !important}
+    section{padding-left:20px !important;padding-right:20px !important}
+  }
+
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  summary{list-style:none}
+  summary::-webkit-details-marker{display:none}
+  image-slot{display:block}
+  input,textarea{font-family:'Manrope',sans-serif}
+  @keyframes slideRight{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(-33.3333%)}100%{transform:translateX(-66.6667%)}}
+  @keyframes slideRight4{0%,30%{transform:translateX(0)}37.5%,67.5%{transform:translateX(-25%)}75%,92.5%{transform:translateX(-50%)}100%{transform:translateX(-75%)}}
+  .gm-about-nav-toggle{display:none}
+  @media (max-width:900px){
+    .gm-about-nav-links, .gm-about-nav-auth{display:none !important}
+    .gm-about-nav-toggle{display:flex !important}
+    .gm-about-mission-grid{grid-template-columns:1fr !important}
+    .gm-about-stats-grid{grid-template-columns:repeat(2,1fr) !important;gap:28px !important}
+    .gm-about-traction-row{grid-template-columns:1fr !important}
+    .gm-about-traction-row > *{order:initial !important}
+    .gm-about-market-grid{grid-template-columns:1fr !important}
+    .gm-about-leader-card{grid-template-columns:1fr !important}
+    .gm-about-leader-card img, .gm-about-leader-card image-slot{height:260px !important}
+    .gm-about-contact-grid{grid-template-columns:1fr !important}
+    .gm-about-footer-grid{grid-template-columns:1fr 1fr !important}
+    .gm-about-hero-title{font-size:36px !important}
+  }
+  @media (max-width:600px){
+    .gm-about-form-grid{grid-template-columns:1fr !important}
+    .gm-about-footer-grid{grid-template-columns:1fr !important}
+    section{padding-left:20px !important;padding-right:20px !important}
+  }
+
+
+  body{margin:0;font-family:'Manrope',sans-serif}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  input::placeholder{color:#B7A6C9}
+  @media (max-width:820px){
+    .gm-sul-signup-grid{grid-template-columns:1fr !important}
+    .gm-sul-signup-left{display:none !important}
+    .gm-sul-signup-form-fields{grid-template-columns:1fr !important}
+  }
+
+
+  body{margin:0;font-family:'Manrope',sans-serif}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  input::placeholder{color:#B7A6C9}
+  @media (max-width:820px){
+    .gm-sui-signup-grid{grid-template-columns:1fr !important}
+    .gm-sui-signup-left{display:none !important}
+    .gm-sui-signup-form-fields{grid-template-columns:1fr !important}
+  }
+
+
+  body{margin:0;font-family:'Manrope',sans-serif}
+  a{text-decoration:none;color:inherit}
+  ::selection{background:#FFC02E;color:#3C0960}
+  input::placeholder{color:#B7A6C9}
+  @media (max-width:820px){
+    .gm-suo-signup-grid{grid-template-columns:1fr !important}
+    .gm-suo-signup-left{display:none !important}
+  }
+
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  a:link, a:visited{color:inherit}
+  a:hover{color:#FFC02E}
+  summary{list-style:none;cursor:pointer}
+  summary::-webkit-details-marker{display:none}
+  .gm-dl-dash-sidebar{position:fixed;top:0;left:0;height:100vh;z-index:200;transform:translateX(-110%);transition:transform 0.25s ease;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+  .gm-dl-dash-sidebar.gm-dl-open{transform:translateX(0)}
+  .gm-dl-dash-overlay{display:none}
+  .gm-dl-dash-overlay.gm-dl-open{display:block;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:150}
+
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  a:link, a:visited{color:inherit}
+  a:hover{color:#FFC02E}
+  summary{list-style:none;cursor:pointer}
+  summary::-webkit-details-marker{display:none}
+  .gm-di-dash-sidebar{position:fixed;top:0;left:0;height:100vh;z-index:200;transform:translateX(-110%);transition:transform 0.25s ease;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+  .gm-di-dash-sidebar.gm-di-open{transform:translateX(0)}
+  .gm-di-dash-overlay{display:none}
+  .gm-di-dash-overlay.gm-di-open{display:block;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:150}
+
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;color:#211633;background:#FBFAFD;-webkit-font-smoothing:antialiased;line-height:1.5}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.1;letter-spacing:-0.02em}
+  a{text-decoration:none;color:inherit}
+  a:link, a:visited{color:inherit}
+  a:hover{color:#FFC02E}
+  summary{list-style:none;cursor:pointer}
+  summary::-webkit-details-marker{display:none}
+  .gm-dop-dash-sidebar{position:fixed;top:0;left:0;height:100vh;z-index:200;transform:translateX(-110%);transition:transform 0.25s ease;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+  .gm-dop-dash-sidebar.gm-dop-open{transform:translateX(0)}
+  .gm-dop-dash-overlay{display:none}
+  .gm-dop-dash-overlay.gm-dop-open{display:block;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:150}
+
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="overflow-x:hidden">
+<sc-if value="{{ isRouteHome }}" hint-placeholder-val="{{ true }}">
+
+
+<div style="overflow-x: hidden">
+
+  <!-- ===== NAV ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);border-bottom:1px solid #EBE6F1">
+    <nav style="max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:32px">
+      <a href="Home.dc.html" style="display:flex;align-items:center"><img src="assets/gamai-logo.png" alt="Gamai" style="height:38px;width:auto;display:block"></a>
+      <div class="gm-home-nav-links" style="display:flex;gap:28px;margin-left:14px;font-weight:600;font-size:15px;color:#3F2B57">
+        <a href="Home.dc.html" style="color:#600C90">Home</a>
+        <a href="Courses.dc.html" style-hover="color:#600C90">Courses &amp; Skills</a>
+        <a href="About.dc.html" style-hover="color:#600C90">About</a>
+      </div>
+      <div class="gm-home-nav-auth" style="margin-left:auto;display:flex;align-items:center;gap:18px">
+        <sc-if value="{{ home.isLoggedIn }}" hint-placeholder-val="{{ false }}">
+        <details style="position:relative">
+          <summary style="display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer">
+            <div style="width:38px;height:38px;border-radius:50%;background:#EDE1F6;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 0 0 1.5px #D8C7EE">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#7A189A"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+            </div>
+          </summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:180px;z-index:60">
+            <a href="{{ home.dashboardHref }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Profile</a>
+            <a href="Home.dc.html" onClick="{{ home.handleLogout }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Log out</a>
+          </div>
+        </details>
+        </sc-if>
+        <sc-if value="{{ home.isLoggedOut }}" hint-placeholder-val="{{ true }}">
+        <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Log in</a>
+        <details style="position:relative">
+          <summary style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:#3C0960;background:#FFC02E;padding:11px 22px;border-radius:999px;box-shadow:0 6px 16px rgba(251,140,24,0.28);cursor:pointer" style-hover="background:#FB8C18;color:#fff">Sign up<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:220px;z-index:60">
+            <a href="Sign Up - Organisation.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Organisation</a>
+            <a href="Sign Up - Learner.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Individual</a>
+            <a href="Sign Up - Instructor.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Instructor</a>
+          </div>
+        </details>
+        </sc-if>
+      </div>
+      <button class="gm-home-nav-toggle" onClick="{{ home.toggleMobileMenu }}" style="align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C1947" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <sc-if value="{{ home.isMobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #EBE6F1;padding:16px 28px;display:flex;flex-direction:column;gap:14px;background:#fff">
+      <a href="Home.dc.html" style="font-weight:600;font-size:15px;color:#600C90">Home</a>
+      <a href="Courses.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Courses &amp; Skills</a>
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">About</a>
+      <div style="border-top:1px solid #EBE6F1;margin:4px 0"></div>
+      <sc-if value="{{ home.isLoggedIn }}" hint-placeholder-val="{{ false }}">
+      <a href="{{ home.dashboardHref }}" style="font-weight:600;font-size:15px;color:#3F2B57">Profile</a>
+      <a href="Home.dc.html" onClick="{{ home.handleLogout }}" style="font-weight:600;font-size:15px;color:#3F2B57">Log out</a>
+      </sc-if>
+      <sc-if value="{{ home.isLoggedOut }}" hint-placeholder-val="{{ true }}">
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Log in</a>
+      <a href="Sign Up - Learner.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Individual</a>
+      <a href="Sign Up - Instructor.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Instructor</a>
+      <a href="Sign Up - Organisation.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Organisation</a>
+      </sc-if>
+    </div>
+    </sc-if>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative;background:linear-gradient(160deg,#4B0A77 0%,#600C90 52%,#7A189A 100%);color:#fff;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.45),transparent 70%)"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:64px 28px 84px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center" class="gm-home-hero-grid">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,192,46,0.16);border:1px solid rgba(255,192,46,0.45);color:#FFD668;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase">AI-powered learning &amp; tutoring</div>
+        <h1 class="gm-home-hero-title" style="font-size:60px;font-weight:800;margin:22px 0 0;color:#fff">Learn. Practice.<br><span style="color:#FFC02E">Build your future.</span></h1>
+        <p style="font-size:19px;line-height:1.6;color:rgba(255,255,255,0.82);margin:20px 0 0;max-width:520px">Built for schools, companies and individual learners, with live instruction and progress tracking built in.</p>
+        <p style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.6); margin: 10px 0 0; max-width: 520px">Quality e-content plus online &amp; hybrid tutoring — for K-12, external exams, academic support, and in-demand tech skills.</p>
+
+        <div class="gm-home-hero-search-row" style="display:flex;gap:12px;margin-top:36px;max-width:560px">
+          <div style="flex:1;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(255,255,255,0.28);border-radius:14px;padding:14px 18px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#7A5A9A" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input type="text" placeholder="Search courses — e.g. WAEC, Python, Data Analysis" style="background:transparent;border:none;outline:none;color:#2C1947;font-size:15px;width:100%;font-family:'Manrope'"/>
+          </div>
+          <a href="Courses.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;background:#FFC02E;color:#3C0960;font-weight:800;font-size:14.5px;padding:0 22px;border-radius:14px;white-space:nowrap" style-hover="background:#fff">View all courses</a>
+        </div>
+      </div>
+
+      <!-- hero visual -->
+      <div style="position:relative">
+        <div style="position:absolute;inset:-14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:28px"></div>
+        <div style="position:relative;width:100%;height:420px;border-radius:22px;box-shadow:0 30px 60px rgba(34,8,60,0.5);overflow:hidden">
+          <div style="display:flex;width:500%;height:100%;animation:heroSlideRight 16s infinite linear">
+            <img src="assets/hero-classroom.png" alt="Corporate training cohort" style="width:20%;height:100%;object-fit:cover">
+            <img src="assets/hero-2.jpg" alt="K-12 classroom" style="width:20%;height:100%;object-fit:cover">
+            <img src="assets/hero-3.jpg" alt="Learner online" style="width:20%;height:100%;object-fit:cover">
+            <img src="assets/hero-4.jpg" alt="Learner online" style="width:20%;height:100%;object-fit:cover">
+            <img src="assets/hero-classroom.png" alt="Corporate training cohort" style="width:20%;height:100%;object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CORE VALUES ===== -->
+  <section style="max-width:1200px;margin:0 auto;padding:88px 28px 60px">
+    <div style="max-width:760px">
+      <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Core values</div>
+      <h2 style="font-size:44px;font-weight:800;margin:14px 0 0;color:#211633;line-height:1.15">What guides how we build Gamai</h2>
+      <p class="gm-home-cv-lead" style="font-size:16px;color:#5C5470;margin-top:20px;line-height:1.65;white-space:nowrap">Six commitments that shape every course, tutoring session and partnership on the platform.</p>
+    </div>
+    <div class="gm-home-cv-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px">
+      <sc-for list="{{ home.coreValues }}" as="v" hint-placeholder-count="6">
+        <div style="grid-column:{{ v.span }};background:#fff;border:1px solid #EBE6F1;border-radius:20px;padding:30px 28px;box-shadow:0 10px 28px rgba(60,9,96,0.06);position:relative;overflow:hidden" style-hover="box-shadow:0 20px 40px rgba(60,9,96,0.14);transform:translateY(-3px)">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:{{ v.accent }}"></div>
+          <div style="width:46px;height:46px;border-radius:13px;background:{{ v.accentSoft }};display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans';font-weight:800;font-size:16px;color:{{ v.accentText }}">{{ v.n }}</div>
+          <h3 style="font-size:18.5px;font-weight:800;margin:20px 0 0;color:#2C1947;line-height:1.3">{{ v.title }}</h3>
+          <p style="font-size:14.5px;color:#5C5470;margin-top:10px;line-height:1.6">{{ v.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== ECOSYSTEM: LEARN > PRACTICE > OPPORTUNITY > SUCCEED ===== -->
+  <section style="max-width:1200px;margin:0 auto;padding:40px 28px 20px">
+    <div style="text-align:center;max-width:680px;margin:0 auto 40px">
+      <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">A complete ecosystem</div>
+      <h2 style="font-size:40px;font-weight:800;margin:10px 0 0;color:#211633">Everything for learning &amp; growth</h2>
+      <p style="font-size:17px;color:#5C5470;margin-top:14px">From your first lesson to a real-world outcome — Gamai connects content, tutors and credentials in one journey.</p>
+    </div>
+    <div class="gm-home-eco-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <sc-for list="{{ home.ecosystem }}" as="step" hint-placeholder-count="4">
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;padding:26px 22px;position:relative;box-shadow:0 8px 24px rgba(60,9,96,0.05)">
+          <div style="width:48px;height:48px;border-radius:12px;background:{{ step.bg }};display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:18px">{{ step.n }}</div>
+          <h3 style="font-size:20px;font-weight:800;margin:16px 0 8px;color:#2C1947">{{ step.title }}</h3>
+          <p style="font-size:14.5px;color:#5C5470;line-height:1.55">{{ step.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== REAL IMPACT — LEARNING IN ACTION ===== -->
+  <section style="background:linear-gradient(180deg,#FBFAFD,#F4EDFB);padding:64px 0;margin-top:28px">
+    <div style="max-width:1080px;margin:0 auto;padding:0 28px">
+      <div style="text-align:center;max-width:720px;margin:0 auto 40px">
+        <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Real impact</div>
+        <h2 style="font-size:40px;font-weight:800;margin:10px 0 0;color:#211633">Learning in action</h2>
+        <p style="font-size:17px;color:#5C5470;margin-top:14px">Over 40 secondary school students trained at Raoatech's office on cutting-edge technology and the future of learning.</p>
+      </div>
+
+      <div class="gm-home-impact-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:26px">
+        <div style="background:#fff;border-radius:18px;overflow:hidden;border:1px solid #EBE6F1;box-shadow:0 10px 30px rgba(60,9,96,0.07)">
+          <div style="position:relative">
+            <img src="https://res.cloudinary.com/okqwvuew/image/upload/v1783439584/Screen_Shot_2026-06-26_at_11.49.51_AM_us3zvs.png" alt="Trainees' Senior Prefect thanking Raoatech's team" style="display:block;width:100%;height:240px;object-fit:cover">
+            <div style="position:absolute;left:0;right:0;bottom:0;height:38px;background:linear-gradient(180deg,transparent,rgba(96,12,144,0.28));pointer-events:none"></div>
+          </div>
+          <p style="padding:18px 20px 22px;font-size:14.5px;line-height:1.55;color:#7A5A9A;margin:0">Trainees' Senior Prefect Thanking Raoatech's Team at the End of Training on Fundamentals of Space Exploration and Applications of AI, Robotics and Drone Technology in Space Missions</p>
+        </div>
+
+        <div style="background:#fff;border-radius:18px;overflow:hidden;border:1px solid #EBE6F1;box-shadow:0 10px 30px rgba(60,9,96,0.07)">
+          <div style="position:relative">
+            <img src="https://res.cloudinary.com/okqwvuew/image/upload/v1783439684/Screen_Shot_2026-06-26_at_10.38.08_AM_1_kantog.png" alt="Mr Oludare Olarewaju and the learners" style="display:block;width:100%;height:240px;object-fit:cover">
+            <div style="position:absolute;left:0;right:0;bottom:0;height:38px;background:linear-gradient(180deg,transparent,rgba(96,12,144,0.28));pointer-events:none"></div>
+          </div>
+          <p style="padding:18px 20px 22px;font-size:14.5px;line-height:1.55;color:#7A5A9A;margin:0">Mr Oludare Olarewaju (Founder and CEO, Raoatech) and the learners</p>
+        </div>
+
+        <div style="background:#fff;border-radius:18px;overflow:hidden;border:1px solid #EBE6F1;box-shadow:0 10px 30px rgba(60,9,96,0.07)">
+          <div style="position:relative">
+            <img src="https://res.cloudinary.com/okqwvuew/image/upload/v1783329281/Screen_Shot_2026-06-26_at_11.45.30_AM_eecmvk.png" alt="Raoatech's team members and the learners" style="display:block;width:100%;height:240px;object-fit:cover">
+            <div style="position:absolute;left:0;right:0;bottom:0;height:38px;background:linear-gradient(180deg,transparent,rgba(96,12,144,0.28));pointer-events:none"></div>
+          </div>
+          <p style="padding:18px 20px 22px;font-size:14.5px;line-height:1.55;color:#7A5A9A;margin:0">Raoatech's Team Members — Kehinde Faith, Aaliyah Odumuboni, Abel Osuji and the learners</p>
+        </div>
+
+        <div style="background:#fff;border-radius:18px;overflow:hidden;border:1px solid #EBE6F1;box-shadow:0 10px 30px rgba(60,9,96,0.07)">
+          <div style="position:relative">
+            <img src="https://res.cloudinary.com/okqwvuew/image/upload/v1783439675/Screen_Shot_2026-06-26_at_11.46.00_AM_oycte9.png" alt="Raoatech's team member Daniel Sadiq and the learners" style="display:block;width:100%;height:240px;object-fit:cover">
+            <div style="position:absolute;left:0;right:0;bottom:0;height:38px;background:linear-gradient(180deg,transparent,rgba(96,12,144,0.28));pointer-events:none"></div>
+          </div>
+          <p style="padding:18px 20px 22px;font-size:14.5px;line-height:1.55;color:#7A5A9A;margin:0">Raoatech's Team Member (Daniel Sadiq), teacher from the learners' school and the learners</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ONLINE-HYBRID TUTORING ===== -->
+  <section style="max-width:1200px;margin:0 auto;padding:72px 28px">
+    <div class="gm-home-tutor-grid" style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:52px;align-items:center">
+      <div style="position: relative">
+        <image-slot id="tutor-session" style="display:block;width:100%;height:400px;border-radius:22px;box-shadow:0 24px 50px rgba(60,9,96,0.18)" shape="rounded" radius="22" placeholder="Drop a tutoring photo" src="assets/tutor-session.jpg"></image-slot>
+        <div style="position:absolute;bottom:-24px;left:-24px;background:#600C90;color:#fff;padding:18px 22px;border-radius:18px;box-shadow:0 18px 38px rgba(60,9,96,0.35);max-width:230px">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px">Online &amp; in-person</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.78);margin-top:4px">Pick the mode that fits your week — live video or hybrid sessions near you.</div>
+        </div>
+      </div>
+      <div>
+        <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Online · Hybrid tutoring</div>
+        <h2 style="font-size:40px;font-weight:800;margin:10px 0 0;color:#211633">A tutor matched to every goal</h2>
+        <p style="font-size:17px;color:#5C5470;margin-top:16px;max-width:520px">Book verified tutors for K-12 subjects, external exam prep and academic support — one-to-one or in small groups, live online or in hybrid sessions.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px">
+          <sc-for list="{{ home.tutorPerks }}" as="p" hint-placeholder-count="4">
+            <div style="display:flex;gap:11px;align-items:flex-start;background:#F6EFFB;border:1px solid #EBE0F5;padding:15px;border-radius:14px">
+              <div style="flex:none;width:26px;height:26px;border-radius:8px;background:#FFC02E;display:flex;align-items:center;justify-content:center;color:#3C0960;font-weight:900;font-size:15px">✓</div>
+              <div><div style="font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px;color:#2C1947">{{ p.t }}</div><div style="font-size:13px;color:#5C5470;margin-top:2px">{{ p.d }}</div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR COURSES / E-CONTENT ===== -->
+  <section style="background:#2C0747;color:#fff;padding:72px 0;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.07) 1.3px,transparent 1.5px);background-size:24px 24px;opacity:.5"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 28px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px;flex-wrap:wrap">
+        <div>
+          <div style="color:#FFC02E;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">E-content library</div>
+          <h2 style="font-size:40px;font-weight:800;margin:10px 0 0;color:#fff">Popular courses &amp; skills</h2>
+        </div>
+        <a href="Courses.dc.html" style="font-weight:700;color:#3C0960;font-size:15px;background:#FFC02E;padding:11px 22px;border-radius:999px" style-hover="background:#fff">View all courses →</a>
+      </div>
+      <div class="gm-home-courses-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <sc-for list="{{ home.courses }}" as="c" hint-placeholder-count="6">
+          <div style="background:#fff;border-radius:18px;overflow:hidden;color:#211633" style-hover="transform:translateY(-4px)">
+            <div style="height:8px;background:{{ c.bar }}"></div>
+            <div style="padding:20px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:12px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:{{ c.cat_color }}">{{ c.cat }}</span>
+                <span style="font-size:12.5px;font-weight:700;color:#FB8C18">★ {{ c.rating }}</span>
+              </div>
+              <h3 style="font-size:19px;font-weight:800;margin:10px 0 8px;color:#2C1947">{{ c.title }}</h3>
+              <p style="font-size:13.5px;color:#5C5470;line-height:1.5">{{ c.body }}</p>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px solid #EFEAF4">
+                <span style="font-size:13px;color:#7A7188;font-weight:600">{{ c.meta }}</span>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXTERNAL EXAMS ===== -->
+  <section style="max-width:1200px;margin:0 auto;padding:72px 28px">
+    <div class="gm-home-exam-grid" style="background:linear-gradient(135deg,#FFF6E6,#FFFBF2);border:1px solid #FCE6BC;border-radius:24px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center">
+      <div>
+        <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">External exam prep</div>
+        <h2 style="font-size:34px;font-weight:800;margin:10px 0 0;color:#211633;max-width:560px">Ready for the exams that matter</h2>
+        <p style="font-size:16px;color:#5C5470;margin-top:12px;max-width:560px">Structured prep, past-question banks and expert tutors for the boards your future depends on.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
+          <sc-for list="{{ home.exams }}" as="e" hint-placeholder-count="6">
+            <span style="background:#fff;border:1.5px solid #FCE0AE;color:#3C0960;font-family:'Plus Jakarta Sans';font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;box-shadow:0 4px 12px rgba(251,140,24,0.12)">{{ e }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <a href="Courses.dc.html" style="flex:none;font-weight:700;font-size:15px;color:#fff;background:#600C90;padding:15px 30px;border-radius:999px;box-shadow:0 14px 30px rgba(96,12,144,0.28)" style-hover="background:#FB8C18">Start prep →</a>
+    </div>
+  </section>
+
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#1F0635;color:rgba(255,255,255,0.7);padding:56px 0 28px">
+    <div class="gm-home-footer-grid" style="max-width:1200px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="background:#fff;display:inline-block;padding:10px 14px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:32px;display:block"></div>
+        <p style="font-size:14px;line-height:1.6;margin-top:16px;max-width:280px">AI-powered learning &amp; tutoring — e-content, online &amp; hybrid tutors, exam prep and tech skills, all in one place.</p>
+        <div style="display:flex;gap:10px;margin-top:18px">
+          <sc-for list="{{ home.socials }}" as="s" hint-placeholder-count="4">
+            <span style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center">{{ s }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Platform</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Online tutoring</a>
+          <a href="Courses.dc.html" style-hover="color:#FFC02E">Courses &amp; e-content</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Exam prep</a>
+          <a href="Courses.dc.html" style-hover="color:#FFC02E">Tech &amp; creative skills</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Company</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="About.dc.html" style-hover="color:#FFC02E">About us</a>
+          <a href="About.dc.html" style-hover="color:#FFC02E">Become a tutor</a>
+          <a href="About.dc.html" style-hover="color:#FFC02E">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <span>www.gamai.com.ng</span>
+          <span>info@gamai.com.ng</span>
+          <span>+234 809 722 7051</span>
+          <span>Yaba, Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:36px auto 0;padding:20px 28px 0;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:8px">
+      <span>© {{ home.year }} Gamai. All rights reserved.</span>
+      <span>Privacy · Terms · Cookies</span>
+    </div>
+  </footer>
+
+</div>
+
+</sc-if>
+
+<sc-if value="{{ isRouteCourses }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);border-bottom:1px solid #EBE6F1">
+    <nav style="max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:32px">
+      <a href="Home.dc.html" style="display:flex;align-items:center"><img src="assets/gamai-logo.png" alt="Gamai" style="height:38px;width:auto;display:block"></a>
+      <div class="gm-courses-nav-links" style="display:flex;gap:28px;margin-left:14px;font-weight:600;font-size:15px;color:#3F2B57">
+        <a href="Home.dc.html" style-hover="color:#600C90">Home</a>
+        <a href="Courses.dc.html" style="color:#600C90">Courses &amp; Skills</a>
+        <a href="About.dc.html" style-hover="color:#600C90">About</a>
+      </div>
+      <div class="gm-courses-nav-auth" style="margin-left:auto;display:flex;align-items:center;gap:18px">
+        <sc-if value="{{ coursesPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
+        <details style="position:relative">
+          <summary style="display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer">
+            <div style="width:38px;height:38px;border-radius:50%;background:#EDE1F6;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 0 0 1.5px #D8C7EE">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#7A189A"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+            </div>
+          </summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:180px;z-index:60">
+            <a href="{{ coursesPage.dashboardHref }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Profile</a>
+            <a href="Home.dc.html" onClick="{{ coursesPage.handleLogout }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Log out</a>
+          </div>
+        </details>
+        </sc-if>
+        <sc-if value="{{ coursesPage.isLoggedOut }}" hint-placeholder-val="{{ true }}">
+        <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Log in</a>
+        <details style="position:relative">
+          <summary style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:#3C0960;background:#FFC02E;padding:11px 22px;border-radius:999px;box-shadow:0 6px 16px rgba(251,140,24,0.28);cursor:pointer" style-hover="background:#FB8C18;color:#fff">Sign up<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:220px;z-index:60">
+            <a href="Sign Up - Organisation.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Organisation</a>
+            <a href="Sign Up - Learner.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Individual</a>
+            <a href="Sign Up - Instructor.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Instructor</a>
+          </div>
+        </details>
+        </sc-if>
+      </div>
+      <button class="gm-courses-nav-toggle" onClick="{{ coursesPage.toggleMobileMenu }}" style="align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C1947" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <sc-if value="{{ coursesPage.isMobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #EBE6F1;padding:16px 28px;display:flex;flex-direction:column;gap:14px;background:#fff">
+      <a href="Home.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Home</a>
+      <a href="Courses.dc.html" style="font-weight:600;font-size:15px;color:#600C90">Courses &amp; Skills</a>
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">About</a>
+      <div style="border-top:1px solid #EBE6F1;margin:4px 0"></div>
+      <sc-if value="{{ coursesPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
+      <a href="{{ coursesPage.dashboardHref }}" style="font-weight:600;font-size:15px;color:#3F2B57">Profile</a>
+      <a href="Home.dc.html" onClick="{{ coursesPage.handleLogout }}" style="font-weight:600;font-size:15px;color:#3F2B57">Log out</a>
+      </sc-if>
+      <sc-if value="{{ coursesPage.isLoggedOut }}" hint-placeholder-val="{{ true }}">
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Log in</a>
+      <a href="Sign Up - Learner.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Individual</a>
+      <a href="Sign Up - Instructor.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Instructor</a>
+      <a href="Sign Up - Organisation.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Organisation</a>
+      </sc-if>
+    </div>
+    </sc-if>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative;background:linear-gradient(160deg,#4B0A77,#600C90 55%,#7A189A);color:#fff;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.4),transparent 70%)"></div>
+    <div style="position:relative;max-width:900px;margin:0 auto;padding:64px 28px 56px;text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,192,46,0.16);border:1px solid rgba(255,192,46,0.45);color:#FFD668;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase">E-content library</div>
+      <h1 class="gm-courses-hero-title" style="font-size:54px;font-weight:800;margin:20px 0 0">Courses &amp; skills for<br><span style="color:#FFC02E">every ambition</span></h1>
+      <p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,0.82);margin:18px auto 0;max-width:560px">Self-paced video lessons, projects and assessments — from school subjects to job-ready tech and creative skills.</p>
+    </div>
+  </section>
+
+  <!-- COURSE GRID -->
+  <section style="max-width:1200px;margin:0 auto;padding:28px 28px 8px">
+    <div class="gm-courses-courses-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <sc-for list="{{ coursesPage.courses }}" as="c" hint-placeholder-count="9">
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(60,9,96,0.05)" style-hover="transform:translateY(-4px)">
+          <div style="position:relative">
+            <image-slot id="{{ c.id }}" style="display:block;width:100%;height:160px" shape="rect" placeholder="{{ c.ph }}" src="{{ c.src }}"></image-slot>
+          </div>
+          <div style="padding:20px">
+            <h3 style="font-size:18px;font-weight:800;color:#2C1947;margin-bottom:6px">{{ c.title }}</h3>
+            <p style="font-size:13.5px;color:#5C5470;line-height:1.5;min-height:40px">{{ c.body }}</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid #EFEAF4">
+              <span style="font-size:13px;font-weight:700;color:#3F2B57;cursor:pointer" style-hover="color:#600C90">View Curriculum</span>
+              <span style="font-size:13px;font-weight:700;color:#600C90;background:#F1E4FB;padding:6px 14px;border-radius:999px;cursor:pointer;display:inline-block;transition:transform 0.18s ease,box-shadow 0.18s ease,background 0.18s ease,color 0.18s ease" style-hover="background:#600C90;color:#fff;transform:translateY(-2px) scale(1.05);box-shadow:0 8px 18px rgba(96,12,144,0.35)">Subscribe</span>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- LEARNING PATHS -->
+  <section id="paths" style="background:#F4EDFB;padding:68px 0;margin-top:48px">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px">
+      <div style="text-align:center;max-width:640px;margin:0 auto 38px">
+        <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Guided paths</div>
+        <h2 style="font-size:38px;font-weight:800;margin:10px 0 0">Go from beginner to job-ready</h2>
+        <p style="font-size:17px;color:#5C5470;margin-top:14px">Structured tracks that stack courses, projects and tutor support toward a real outcome.</p>
+      </div>
+      <div class="gm-courses-paths-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <sc-for list="{{ coursesPage.paths }}" as="p" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid #E7D9F4;border-radius:22px;padding:30px;position:relative">
+            <div style="width:54px;height:54px;border-radius:16px;background:{{ p.iconbg }};display:flex;align-items:center;justify-content:center;font-size:26px">{{ p.emoji }}</div>
+            <h3 style="font-size:21px;font-weight:800;margin:16px 0 8px;color:#2C1947">{{ p.title }}</h3>
+            <p style="font-size:14px;color:#5C5470;line-height:1.55">{{ p.body }}</p>
+            <div style="display:flex;gap:14px;margin-top:16px;font-size:13px;color:#7A7188;font-weight:600">
+              <span>📚 {{ p.courses }}</span><span>⏱ {{ p.length }}</span>
+            </div>
+            <a href="About.dc.html#contact" style="display:inline-block;margin-top:18px;font-weight:700;font-size:14px;color:#600C90" style-hover="color:#FB8C18">Explore path →</a>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1F0635;color:rgba(255,255,255,0.7);padding:56px 0 28px">
+    <div class="gm-courses-footer-grid" style="max-width:1200px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="background:#fff;display:inline-block;padding:10px 14px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:32px;display:block"></div>
+        <p style="font-size:14px;line-height:1.6;margin-top:16px;max-width:280px">AI-powered learning &amp; tutoring — e-content, online &amp; hybrid tutors, exam prep and tech skills, all in one place.</p>
+        <div style="display:flex;gap:10px;margin-top:18px">
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,0.85)"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M22 5.8a8.5 8.5 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.7 11.7 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.6a11.7 11.7 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5A8.3 8.3 0 0 0 22 5.8z"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M22.5 6.2a2.8 2.8 0 0 0-2-2C18.8 3.7 12 3.7 12 3.7s-6.8 0-8.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.8 2.8 2.8 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.8zM10 15.5v-7l6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Platform</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Online tutoring</a>
+          <a href="Courses.dc.html" style-hover="color:#FFC02E">Courses &amp; e-content</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Exam prep</a>
+          <a href="Courses.dc.html" style-hover="color:#FFC02E">Tech &amp; creative skills</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Company</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="About.dc.html" style-hover="color:#FFC02E">About us</a>
+          <a href="Home.dc.html#schools" style-hover="color:#FFC02E">For schools</a>
+          <a href="About.dc.html" style-hover="color:#FFC02E">Become a tutor</a>
+          <a href="About.dc.html" style-hover="color:#FFC02E">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <span>www.gamai.com.ng</span>
+          <span>info@gamai.com.ng</span>
+          <span>+234 809 722 7051</span>
+          <span>Yaba, Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:36px auto 0;padding:20px 28px 0;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:8px">
+      <span>© 2026 Gamai. All rights reserved.</span>
+      <span>Privacy · Terms · Cookies</span>
+    </div>
+  </footer>
+
+</div>
+
+</sc-if>
+
+<sc-if value="{{ isRouteAbout }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);border-bottom:1px solid #EBE6F1">
+    <nav style="max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:32px">
+      <a href="Home.dc.html" style="display:flex;align-items:center"><img src="assets/gamai-logo.png" alt="Gamai" style="height:38px;width:auto;display:block"></a>
+      <div class="gm-about-nav-links" style="display:flex;gap:28px;margin-left:14px;font-weight:600;font-size:15px;color:#3F2B57">
+        <a href="Home.dc.html" style-hover="color:#600C90">Home</a>
+        <a href="Courses.dc.html" style-hover="color:#600C90">Courses &amp; Skills</a>
+        <a href="About.dc.html" style="color:#600C90">About</a>
+      </div>
+      <div class="gm-about-nav-auth" style="margin-left:auto;display:flex;align-items:center;gap:18px">
+        <sc-if value="{{ aboutPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
+        <details style="position:relative">
+          <summary style="display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer">
+            <div style="width:38px;height:38px;border-radius:50%;background:#EDE1F6;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 0 0 1.5px #D8C7EE">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#7A189A"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+            </div>
+          </summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:180px;z-index:60">
+            <a href="{{ aboutPage.dashboardHref }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Profile</a>
+            <a href="Home.dc.html" onClick="{{ aboutPage.handleLogout }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Log out</a>
+          </div>
+        </details>
+        </sc-if>
+        <sc-if value="{{ aboutPage.isLoggedOut }}" hint-placeholder-val="{{ true }}">
+        <a href="#contact" style="font-weight:600;font-size:15px;color:#3F2B57">Log in</a>
+        <details style="position:relative">
+          <summary style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:#3C0960;background:#FFC02E;padding:11px 22px;border-radius:999px;box-shadow:0 6px 16px rgba(251,140,24,0.28);cursor:pointer" style-hover="background:#FB8C18;color:#fff">Sign up<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:220px;z-index:60">
+            <a href="Sign Up - Organisation.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Organisation</a>
+            <a href="Sign Up - Learner.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Individual</a>
+            <a href="Sign Up - Instructor.dc.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Sign up as Instructor</a>
+          </div>
+        </details>
+        </sc-if>
+      </div>
+      <button class="gm-about-nav-toggle" onClick="{{ aboutPage.toggleMobileMenu }}" style="align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C1947" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <sc-if value="{{ aboutPage.isMobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #EBE6F1;padding:16px 28px;display:flex;flex-direction:column;gap:14px;background:#fff">
+      <a href="Home.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Home</a>
+      <a href="Courses.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Courses &amp; Skills</a>
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#600C90">About</a>
+      <div style="border-top:1px solid #EBE6F1;margin:4px 0"></div>
+      <sc-if value="{{ aboutPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
+      <a href="{{ aboutPage.dashboardHref }}" style="font-weight:600;font-size:15px;color:#3F2B57">Profile</a>
+      <a href="Home.dc.html" onClick="{{ aboutPage.handleLogout }}" style="font-weight:600;font-size:15px;color:#3F2B57">Log out</a>
+      </sc-if>
+      <sc-if value="{{ aboutPage.isLoggedOut }}" hint-placeholder-val="{{ true }}">
+      <a href="#contact" style="font-weight:600;font-size:15px;color:#3F2B57">Log in</a>
+      <a href="Sign Up - Learner.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Individual</a>
+      <a href="Sign Up - Instructor.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Instructor</a>
+      <a href="Sign Up - Organisation.dc.html" style="font-weight:700;font-size:15px;color:#600C90">Sign up as Organisation</a>
+      </sc-if>
+    </div>
+    </sc-if>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative;background:linear-gradient(160deg,#4B0A77,#600C90 55%,#7A189A);color:#fff;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-120px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.4),transparent 70%)"></div>
+    <div style="position:relative;max-width:820px;margin:0 auto;padding:66px 28px 58px;text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,192,46,0.16);border:1px solid rgba(255,192,46,0.45);color:#FFD668;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase">About Gamai</div>
+      <h1 class="gm-about-hero-title" style="font-size:52px;font-weight:800;margin:20px 0 0">Learning that opens<br><span style="color:#FFC02E">real opportunity</span></h1>
+      <p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,0.82);margin:18px auto 0;max-width:600px">Gamai is an AI-powered learning platform built in Nigeria — connecting quality e-content, trusted tutors and recognised skills so every learner can build the future they want.</p>
+    </div>
+  </section>
+
+  <!-- MISSION / STORY -->
+  <section style="max-width:1200px;margin:0 auto;padding:68px 28px">
+    <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:52px;align-items:center" class="gm-about-mission-grid">
+      <div>
+        <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Our mission</div>
+        <h2 style="font-size:38px;font-weight:800;margin:10px 0 0">Bridging learning and opportunity</h2>
+        <p style="font-size:16.5px;color:#5C5470;line-height:1.7;margin-top:18px">Too many learners have the drive but not the access — to good content, the right tutor, or a clear path to a career. Gamai brings it together in one place: structured e-content, online and hybrid tutoring, and skills that employers actually want.</p>
+        <p style="font-size:16.5px;color:#5C5470;line-height:1.7;margin-top:14px">From a K-12 student revising for exams to a professional switching careers, we meet learners where they are and walk with them to where they want to be.</p>
+      </div>
+      <image-slot id="about-mission" style="display:block;width:100%;height:400px;border-radius:22px;box-shadow:0 24px 50px rgba(60,9,96,0.18)" shape="rounded" radius="22" placeholder="Drop a team / learners photo" src="assets/raoatech-team.jpg"></image-slot>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background:#2C0747;color:#fff;padding:56px 0;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.07) 1.3px,transparent 1.5px);background-size:24px 24px;opacity:.5"></div>
+    <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center" class="gm-about-stats-grid">
+      <sc-for list="{{ aboutPage.stats }}" as="s" hint-placeholder-count="4">
+        <div>
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:42px;color:#FFC02E">{{ s.n }}</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.78);font-weight:600;margin-top:4px">{{ s.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  </section>
+
+  <!-- TRACTION -->
+  <section style="max-width:1200px;margin:0 auto;padding:68px 28px 24px">
+    <div style="text-align:center;max-width:640px;margin:0 auto 48px">
+      <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Traction</div>
+      <h2 style="font-size:38px;font-weight:800;margin:10px 0 0;color:#211633">Proof it's working</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:56px">
+      <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center" class="gm-about-traction-row">
+        <image-slot id="traction-corporate" src="assets/traction-corporate.png" style="display:block;width:100%;height:280px;border-radius:20px;box-shadow:0 18px 40px rgba(60,9,96,0.12)" shape="rounded" radius="20" placeholder="Cohort photo — Interswitch/Oxratech QA training"></image-slot>
+        <div>
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;color:#D8C7EE">01</div>
+          <h3 style="font-size:22px;font-weight:800;margin:10px 0 0;color:#2C1947">Corporate &amp; Industry Engagement</h3>
+          <p style="font-size:15.5px;color:#5C5470;line-height:1.65;margin-top:12px;max-width:480px">Trained 100 Nigerian youths in an 8-week Quality Assurance/Software Testing program — delivered with Oxratech and sponsored by Interswitch, Africa's fintech unicorn (completed December 2024).</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center" class="gm-about-traction-row">
+        <div style="order:1">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;color:#D8C7EE">02</div>
+          <h3 style="font-size:22px;font-weight:800;margin:10px 0 0;color:#2C1947">Growing Learner Base</h3>
+          <p style="font-size:15.5px;color:#5C5470;line-height:1.65;margin-top:12px;max-width:480px">Over 355 paying K–12 learners from the UK, Canada and Nigeria are currently enrolled.</p>
+        </div>
+        <image-slot id="traction-learners" src="assets/traction-learners.png" style="display:block;width:100%;height:280px;border-radius:20px;box-shadow:0 18px 40px rgba(60,9,96,0.12);order:2" shape="rounded" radius="20" placeholder="K-12 learners studying online"></image-slot>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center" class="gm-about-traction-row">
+        <img src="assets/traction-instructors.png" alt="Instructor delivering a course" style="display:block;width:100%;height:280px;object-fit:cover;border-radius:20px;box-shadow:0 18px 40px rgba(60,9,96,0.12)">
+        <div>
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;color:#D8C7EE">03</div>
+          <h3 style="font-size:22px;font-weight:800;margin:10px 0 0;color:#2C1947">Instructor Network</h3>
+          <p style="font-size:15.5px;color:#5C5470;line-height:1.65;margin-top:12px;max-width:480px">50 registered instructors are actively delivering courses and supporting learners.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center" class="gm-about-traction-row">
+        <div style="order:1">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:15px;color:#D8C7EE">04</div>
+          <h3 style="font-size:22px;font-weight:800;margin:10px 0 0;color:#2C1947">Global Reach &amp; Validation</h3>
+          <p style="font-size:15.5px;color:#5C5470;line-height:1.65;margin-top:12px;max-width:480px">Cross-border adoption that validates Gamai as a scalable, high-quality EdTech platform.</p>
+        </div>
+        <div style="position:relative;width:100%;height:280px;border-radius:20px;box-shadow:0 18px 40px rgba(60,9,96,0.12);overflow:hidden;order:2">
+          <div style="display:flex;width:300%;height:100%;animation:slideRight 9s infinite linear">
+            <img src="assets/global-1.jpg" alt="Learner online" style="width:33.3333%;height:100%;object-fit:cover">
+            <img src="assets/global-2.jpg" alt="Learner online" style="width:33.3333%;height:100%;object-fit:cover">
+            <img src="assets/global-1.jpg" alt="Learner online" style="width:33.3333%;height:100%;object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET MARKET -->
+  <section style="max-width:1200px;margin:0 auto;padding:68px 28px 24px">
+    <div style="text-align:center;max-width:640px;margin:0 auto 44px">
+      <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Who we serve</div>
+      <h2 style="font-size:38px;font-weight:800;margin:10px 0 0;color:#211633">Target Market</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px" class="gm-about-market-grid">
+      <div style="background:#fff;border:1px solid #EBE6F1;border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(60,9,96,0.08)">
+        <div style="position:relative;width:100%;height:220px;overflow:hidden">
+          <div style="display:flex;width:400%;height:100%;animation:slideRight4 12s infinite linear">
+            <img src="assets/market-primary-1.jpg" alt="School learners" style="width:25%;height:100%;object-fit:cover">
+            <img src="assets/market-primary-2.jpg" alt="School learners" style="width:25%;height:100%;object-fit:cover">
+            <img src="assets/market-primary-3.jpg" alt="STEM robotics and coding session at St. Gregory College, Lagos" style="width:25%;height:100%;object-fit:cover">
+            <img src="assets/market-primary-1.jpg" alt="School learners" style="width:25%;height:100%;object-fit:cover">
+          </div>
+        </div>
+        <div style="padding:28px 30px 32px">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:13px;color:#7A189A;letter-spacing:0.04em;text-transform:uppercase">Primary markets</div>
+          <ul style="margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#2C1947;line-height:1.5"><span style="width:6px;height:6px;border-radius:50%;background:#FB8C18;margin-top:9px;flex:none"></span>Primary and secondary schools</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#2C1947;line-height:1.5"><span style="width:6px;height:6px;border-radius:50%;background:#FB8C18;margin-top:9px;flex:none"></span>Tertiary institutions</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#2C1947;line-height:1.5"><span style="width:6px;height:6px;border-radius:50%;background:#FB8C18;margin-top:9px;flex:none"></span>Training centers and professional institutes</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EBE6F1;border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(60,9,96,0.08)">
+        <div style="position:relative;width:100%;height:220px;overflow:hidden">
+          <div style="display:flex;width:300%;height:100%;animation:slideRight 9s infinite linear">
+            <img src="assets/market-secondary-1.png" alt="Institutional partnership" style="width:33.3333%;height:100%;object-fit:cover">
+            <img src="assets/market-secondary-2.png" alt="Institutional partnership" style="width:33.3333%;height:100%;object-fit:cover">
+            <img src="assets/market-secondary-1.png" alt="Institutional partnership" style="width:33.3333%;height:100%;object-fit:cover">
+          </div>
+        </div>
+        <div style="padding:28px 30px 32px">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:13px;color:#7A189A;letter-spacing:0.04em;text-transform:uppercase">Secondary markets</div>
+          <ul style="margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#2C1947;line-height:1.5"><span style="width:6px;height:6px;border-radius:50%;background:#600C90;margin-top:9px;flex:none"></span>Corporate learning and employee training</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#2C1947;line-height:1.5"><span style="width:6px;height:6px;border-radius:50%;background:#600C90;margin-top:9px;flex:none"></span>Government and NGO education programs</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#2C1947;line-height:1.5"><span style="width:6px;height:6px;border-radius:50%;background:#600C90;margin-top:9px;flex:none"></span>Individual learners (B2C)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP TEAM -->
+  <section style="max-width:1200px;margin:0 auto;padding:64px 28px 24px">
+    <div style="text-align:center;max-width:640px;margin:0 auto 32px">
+      <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Leadership</div>
+      <h2 style="font-size:32px;font-weight:800;margin:10px 0 0;color:#211633">Leadership Team</h2>
+      <p style="font-size:16px;color:#5C5470;margin-top:12px">Meet the visionary leaders driving Raoatech's mission to transform Nigeria's ICT landscape.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="background:#fff;border:1px solid #EBE6F1;border-radius:22px;box-shadow:0 14px 40px rgba(60,9,96,0.08);overflow:hidden;display:grid;grid-template-columns:280px 1fr" class="gm-about-leader-card">
+        <img src="assets/oludare-olarewaju.jpg" alt="Oludare Olarewaju" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div style="padding:32px 36px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>
+              <h3 style="font-size:20px;font-weight:800;margin:0;color:#211633">Oludare Olarewaju</h3>
+              <div style="font-size:14px;font-weight:700;color:#600C90;margin-top:2px">CEO & Founder</div>
+            </div>
+            <div style="display:flex;gap:10px;flex:none">
+              <a href="https://www.linkedin.com/in/oludare-olarewaju-5426352b/" target="_blank" rel="noopener" style="width:36px;height:36px;border-radius:10px;background:#F1E4FB;display:flex;align-items:center;justify-content:center" style-hover="background:#600C90"><svg width="16" height="16" viewBox="0 0 24 24" fill="#600C90"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21H9z"/></svg></a>
+              <a href="mailto:olarewaju.oludare@raoatech.com" style="width:36px;height:36px;border-radius:10px;background:#F1E4FB;display:flex;align-items:center;justify-content:center" style-hover="background:#600C90"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#600C90" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+              <a href="tel:+2348097227051" style="width:36px;height:36px;border-radius:10px;background:#F1E4FB;display:flex;align-items:center;justify-content:center" style-hover="background:#600C90"><svg width="16" height="16" viewBox="0 0 24 24" fill="#600C90"><path d="M6.6 10.8a15.7 15.7 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.2.4 2.5.6 3.8.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.6.6 3.8a1 1 0 0 1-.25 1z"/></svg></a>
+            </div>
+          </div>
+          <p style="font-size:14.5px;color:#5C5470;line-height:1.65;margin-top:16px">Oludare Olarewaju is a 3X tech founder with over 15-year experience in management of design and development of enterprise software solutions, impacting sectors like education, taxation, lotteries and gaming, aviation, e-commerce and more. He has managed start-ups with over $1.5M revenues in the last few years.</p>
+          <ul style="margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;font-size:14px;color:#5C5470;line-height:1.5">
+            <li>Trained 10,000+ African youths on tech skills in the last 15 years</li>
+            <li>Village Capital accelerator's Future of Work Africa 2022 program participant</li>
+            <li>Design Thinking Coach for University of Lagos undergraduates (2017 &amp; 2018)</li>
+            <li>Amazon Web Service (AWS) Community Builder and speaker</li>
+            <li>President of Association of Nigeria Software Testers with over 1000 members</li>
+          </ul>
+          <div style="font-size:14px;color:#2C1947;margin-top:16px"><strong>Education:</strong> Graduate of Systems Engineering Department, University of Lagos</div>
+          <div style="font-size:14.5px;font-weight:800;color:#211633;margin-top:18px">Presentations &amp; Publications</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+            <a href="https://drive.google.com/file/d/1_HFPj6j7W9wGfE88k2Y7i1wdtvNB7E4z/view" target="_blank" rel="noopener" style="font-size:14px;color:#600C90;font-weight:600" style-hover="color:#FB8C18">Importance of Software Testing (NIPOST)</a>
+            <a href="https://tribuneonlineng.com/businesses-in-nigeria-should-embrace-software-solutions-developed-locally-oludare-2/" target="_blank" rel="noopener" style="font-size:14px;color:#600C90;font-weight:600" style-hover="color:#FB8C18">Publication</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EBE6F1;border-radius:22px;box-shadow:0 14px 40px rgba(60,9,96,0.08);overflow:hidden;display:grid;grid-template-columns:280px 1fr" class="gm-about-leader-card">
+        <image-slot id="leadership-temitope" style="display:block;width:100%;height:100%" shape="rect" placeholder="Temitope Oladele-Olarewaju photo"></image-slot>
+        <div style="padding:32px 36px">
+          <h3 style="font-size:20px;font-weight:800;margin:0;color:#211633">Temitope Oladele-Olarewaju</h3>
+          <div style="font-size:14px;font-weight:700;color:#600C90;margin-top:2px">Director</div>
+          <p style="font-size:14.5px;color:#5C5470;line-height:1.65;margin-top:16px">Temitope is an ISTQB (International Software Testing Qualifications Board)-certified Quality Assurance Engineer/Software Tester with over 15-year of technical hands-on experience in manual testing, performance testing and management of quality assurance/software testing teams for different organisations.</p>
+          <p style="font-size:14.5px;color:#5C5470;line-height:1.65;margin-top:12px">Her experience cuts across sectors such as: telecoms industry (MTN, 9Mobile and others), banking sector (First Bank and others), edtech industry (Raoatech and others), Oil and Gas industry, gaming and lotteries.</p>
+          <div style="font-size:14px;color:#2C1947;margin-top:16px"><strong>Education:</strong> B.Sc Hons in Computer Science from Olabisi Onabanjo University, Nigeria</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:15px;color:#5C5470;margin-top:28px">Our full team consists of over 50 talented professionals dedicated to delivering excellence in ICT solutions and training.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:#F4EDFB;padding:68px 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:start" class="gm-about-contact-grid">
+      <div>
+        <div style="color:#FB8C18;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Get in touch</div>
+        <h2 style="font-size:38px;font-weight:800;margin:10px 0 0">We'd love to hear from you</h2>
+        <p style="font-size:16px;color:#5C5470;margin-top:14px;max-width:420px">Questions about courses, tutoring or partnering with your school? Reach out and our team will get back to you.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:28px">
+          <sc-for list="{{ aboutPage.contacts }}" as="c" hint-placeholder-count="4">
+            <div style="display:flex;gap:14px;align-items:center">
+              <div style="flex:none;width:46px;height:46px;border-radius:14px;background:#fff;border:1px solid #E7D9F4;display:flex;align-items:center;justify-content:center;font-size:20px">{{ c.emoji }}</div>
+              <div><div style="font-size:13px;color:#8A7C9C;font-weight:700">{{ c.label }}</div><div style="font-family:'Plus Jakarta Sans';font-weight:700;font-size:16px;color:#2C1947">{{ c.value }}</div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #E7D9F4;border-radius:22px;padding:32px;box-shadow:0 14px 40px rgba(60,9,96,0.08)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" class="gm-about-form-grid">
+          <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Full name</label><input placeholder="Your name" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none" style-focus="border-color:#600C90"></div>
+          <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Email</label><input placeholder="you@email.com" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none" style-focus="border-color:#600C90"></div>
+        </div>
+        <div style="margin-top:14px"><label style="font-size:13px;font-weight:700;color:#3F2B57">I'm interested in</label><input placeholder="Tutoring, courses, partnership…" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none" style-focus="border-color:#600C90"></div>
+        <div style="margin-top:14px"><label style="font-size:13px;font-weight:700;color:#3F2B57">Message</label><textarea rows="4" placeholder="How can we help?" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;resize:vertical" style-focus="border-color:#600C90"></textarea></div>
+        <button style="width:100%;margin-top:18px;border:none;background:#600C90;color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px;padding:14px;border-radius:12px;cursor:pointer" style-hover="background:#FB8C18">Send message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1F0635;color:rgba(255,255,255,0.7);padding:56px 0 28px">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px" class="gm-about-footer-grid">
+      <div>
+        <div style="background:#fff;display:inline-block;padding:10px 14px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:32px;display:block"></div>
+        <p style="font-size:14px;line-height:1.6;margin-top:16px;max-width:280px">AI-powered learning &amp; tutoring — e-content, online &amp; hybrid tutors, exam prep and tech skills, all in one place.</p>
+        <div style="display:flex;gap:10px;margin-top:18px">
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,0.85)"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M22 5.8a8.5 8.5 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.7 11.7 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.6a11.7 11.7 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5A8.3 8.3 0 0 0 22 5.8z"/></svg></a>
+          <a href="#" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M22.5 6.2a2.8 2.8 0 0 0-2-2C18.8 3.7 12 3.7 12 3.7s-6.8 0-8.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.8 2.8 2.8 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.8zM10 15.5v-7l6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Platform</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Online tutoring</a>
+          <a href="Courses.dc.html" style-hover="color:#FFC02E">Courses &amp; e-content</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Exam prep</a>
+          <a href="Courses.dc.html" style-hover="color:#FFC02E">Tech &amp; creative skills</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Company</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="About.dc.html" style-hover="color:#FFC02E">About us</a>
+          <a href="Home.dc.html#schools" style-hover="color:#FFC02E">For schools</a>
+          <a href="About.dc.html" style-hover="color:#FFC02E">Become a tutor</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <span>www.gamai.com.ng</span>
+          <span>info@gamai.com.ng</span>
+          <span>+234 809 722 7051</span>
+          <span>Yaba, Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:36px auto 0;padding:20px 28px 0;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;font-size:13px;flex-wrap:wrap;gap:8px">
+      <span>© 2026 Gamai. All rights reserved.</span>
+      <span>Privacy · Terms · Cookies</span>
+    </div>
+  </footer>
+
+</div>
+
+</sc-if>
+
+<sc-if value="{{ isRouteSignupLearner }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="min-height:100vh;display:grid;grid-template-columns:0.9fr 1.1fr;background:#fff" class="gm-sul-signup-grid">
+
+  <!-- LEFT PANEL -->
+  <div style="position:relative;background:linear-gradient(160deg,#4B0A77 0%,#600C90 55%,#7A189A 100%);color:#fff;overflow:hidden;padding:40px" class="gm-sul-signup-left">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-100px;right:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.35),transparent 70%)"></div>
+    <div style="position:absolute;bottom:60px;left:40px;width:150px;height:150px;border:1.5px dashed rgba(255,255,255,0.28);border-radius:50%"></div>
+
+    <div style="position:relative">
+      <a href="Home.dc.html" style="background:#fff;display:inline-block;padding:9px 13px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:28px;width:auto;display:block"></a>
+      <p style="font-style:italic;font-weight:700;font-size:26px;color:#FFC02E;margin:64px 0 0;max-width:340px;line-height:1.4">Learn. Practice.<br>Build your future.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.75);margin-top:16px;max-width:320px;line-height:1.6">Quality e-content plus online &amp; hybrid tutoring — one platform, every step of the journey.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL / FORM -->
+  <div style="display:flex;align-items:center;justify-content:center;padding:56px 40px">
+    <div style="max-width:440px;width:100%">
+      <h1 style="font-family:'Plus Jakarta Sans';font-size:30px;font-weight:800;color:#211633;margin:0">Sign Up</h1>
+      <div style="font-size:14px;font-weight:700;color:#600C90;margin-top:4px">as Learner</div>
+      <p style="font-size:13px;color:#8A7C9C;margin-top:18px">Fields marked with <span style="color:#E0417A">*</span> are mandatory.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px" class="gm-sul-signup-form-fields">
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">First Name <span style="color:#E0417A">*</span></label><input ref="{{ signupLearner.firstNameRef }}" placeholder="John" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Last Name <span style="color:#E0417A">*</span></label><input placeholder="Doe" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Email <span style="color:#E0417A">*</span></label>
+        <input placeholder="example@gmail.com" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Phone <span style="color:#E0417A">*</span></label>
+        <input placeholder="+234 222 222" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Password <span style="color:#E0417A">*</span></label>
+        <input type="password" placeholder="Password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+        <div style="font-size:12px;color:#8A7C9C;margin-top:5px">Must include uppercase, lowercase, number, and special character</div>
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Confirm Password <span style="color:#E0417A">*</span></label>
+        <input type="password" placeholder="Confirm Password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+<a href="Dashboard - Learner.dc.html" onClick="{{ signupLearner.handleCreate }}" style="display:block;text-align:center;width:100%;margin-top:22px;border:none;background:#600C90;color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px;padding:14px;border-radius:12px;cursor:pointer" style-hover="background:#FB8C18">Create Account</a>
+
+      <p style="text-align:center;font-size:14px;color:#5C5470;margin-top:22px">Have an account? <a href="#" style="color:#600C90;font-weight:700" style-hover="color:#FB8C18">Log in</a></p>
+    </div>
+  </div>
+</div>
+
+
+</sc-if>
+
+<sc-if value="{{ isRouteSignupInstructor }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="min-height:100vh;display:grid;grid-template-columns:0.9fr 1.1fr;background:#fff" class="gm-sui-signup-grid">
+
+  <!-- LEFT PANEL -->
+  <div style="position:relative;background:linear-gradient(160deg,#4B0A77 0%,#600C90 55%,#7A189A 100%);color:#fff;overflow:hidden;padding:40px" class="gm-sui-signup-left">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-100px;right:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.35),transparent 70%)"></div>
+    <div style="position:absolute;bottom:60px;left:40px;width:150px;height:150px;border:1.5px dashed rgba(255,255,255,0.28);border-radius:50%"></div>
+
+    <div style="position:relative">
+      <a href="Home.dc.html" style="background:#fff;display:inline-block;padding:9px 13px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:28px;width:auto;display:block"></a>
+      <p style="font-style:italic;font-weight:700;font-size:26px;color:#FFC02E;margin:64px 0 0;max-width:340px;line-height:1.4">Share your expertise.<br>Shape the future.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.75);margin-top:16px;max-width:320px;line-height:1.6">Join Gamai as an instructor, tutor or mentor and reach learners across Nigeria.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL / FORM -->
+  <div style="display:flex;align-items:center;justify-content:center;padding:56px 40px">
+    <div style="max-width:520px;width:100%">
+      <h1 style="font-family:'Plus Jakarta Sans';font-size:30px;font-weight:800;color:#211633;margin:0">Sign Up</h1>
+      <div style="font-size:14px;font-weight:700;color:#600C90;margin-top:4px">as Instructor</div>
+      <p style="font-size:13px;color:#8A7C9C;margin-top:18px">Fields marked with <span style="color:#E0417A">*</span> are mandatory.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px" class="gm-sui-signup-form-fields">
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">First Name <span style="color:#E0417A">*</span></label><input ref="{{ signupInstructor.firstNameRef }}" placeholder="John" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Last Name <span style="color:#E0417A">*</span></label><input placeholder="Doe" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px" class="gm-sui-signup-form-fields">
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Other Name</label><input placeholder="Sam" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Email <span style="color:#E0417A">*</span></label><input placeholder="example@gmail.com" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px" class="gm-sui-signup-form-fields">
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Phone (Call) <span style="color:#E0417A">*</span></label><input placeholder="+234 222 222" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Phone (WhatsApp) <span style="color:#E0417A">*</span></label><input placeholder="+234 122 222" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px" class="gm-sui-signup-form-fields">
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Password <span style="color:#E0417A">*</span></label><input type="password" placeholder="Enter password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+        <div><label style="font-size:13px;font-weight:700;color:#3F2B57">Confirm Password <span style="color:#E0417A">*</span></label><input type="password" placeholder="Confirm password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90"></div>
+      </div>
+
+<a href="Dashboard - Instructor.dc.html" onClick="{{ signupInstructor.handleCreate }}" style="display:block;text-align:center;width:100%;margin-top:22px;border:none;background:#600C90;color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px;padding:14px;border-radius:12px;cursor:pointer" style-hover="background:#FB8C18">Submit</a>
+
+      <p style="text-align:center;font-size:14px;color:#5C5470;margin-top:22px">Have an account? <a href="#" style="color:#600C90;font-weight:700" style-hover="color:#FB8C18">Log in</a></p>
+    </div>
+  </div>
+</div>
+
+
+</sc-if>
+
+<sc-if value="{{ isRouteSignupOrg }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="min-height:100vh;display:grid;grid-template-columns:0.9fr 1.1fr;background:#fff" class="gm-suo-signup-grid">
+
+  <!-- LEFT PANEL -->
+  <div style="position:relative;background:linear-gradient(160deg,#4B0A77 0%,#600C90 55%,#7A189A 100%);color:#fff;overflow:hidden;padding:40px" class="gm-suo-signup-left">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.10) 1.4px,transparent 1.6px);background-size:22px 22px;opacity:.5"></div>
+    <div style="position:absolute;top:-100px;right:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(251,140,24,0.35),transparent 70%)"></div>
+    <div style="position:absolute;bottom:60px;left:40px;width:150px;height:150px;border:1.5px dashed rgba(255,255,255,0.28);border-radius:50%"></div>
+
+    <div style="position:relative">
+      <a href="Home.dc.html" style="background:#fff;display:inline-block;padding:9px 13px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:28px;width:auto;display:block"></a>
+      <p style="font-style:italic;font-weight:700;font-size:26px;color:#FFC02E;margin:64px 0 0;max-width:340px;line-height:1.4">Empower your organisation.<br>Scale learning for your team.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.75);margin-top:16px;max-width:320px;line-height:1.6">Bring Gamai's e-content, assessments and tutoring to your schools, staff or members — all under one account.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL / FORM -->
+  <div style="display:flex;align-items:center;justify-content:center;padding:56px 40px">
+    <div style="max-width:420px;width:100%">
+      <h1 style="font-family:'Plus Jakarta Sans';font-size:30px;font-weight:800;color:#211633;margin:0">Sign Up</h1>
+      <div style="font-size:14px;font-weight:700;color:#600C90;margin-top:4px">as Organisation</div>
+
+      <div style="margin-top:20px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Institution Name</label>
+        <input ref="{{ signupOrg.institutionNameRef }}" placeholder="Bright Future Academy" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Full Name</label>
+        <input placeholder="Input text" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Email address</label>
+        <input placeholder="you@organisation.com" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Phone</label>
+        <input placeholder="Input text" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Preferred Url</label>
+        <input placeholder="Input text" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Password</label>
+        <input type="password" placeholder="Password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+      <div style="margin-top:14px">
+        <label style="font-size:13px;font-weight:700;color:#3F2B57">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" style="width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid #E7DEF0;border-radius:12px;font-size:14px;outline:none;box-sizing:border-box" style-focus="border-color:#600C90">
+      </div>
+
+<a href="Dashboard - Organization.dc.html" onClick="{{ signupOrg.handleCreate }}" style="display:block;text-align:center;width:100%;margin-top:22px;border:none;background:#FB8C18;color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px;padding:14px;border-radius:12px;cursor:pointer" style-hover="background:#600C90">Sign Up</a>
+
+      <p style="text-align:center;font-size:14px;color:#5C5470;margin-top:18px">Already Have an account? <a href="#" style="color:#600C90;font-weight:700" style-hover="color:#FB8C18">Sign In</a></p>
+    </div>
+  </div>
+</div>
+
+
+</sc-if>
+
+<sc-if value="{{ isRouteDashLearner }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="display:flex;min-height:100vh;background:#FBFAFD">
+
+  <div class="gm-dl-dash-overlay {{ dashLearner.sidebarOpenClass }}" onClick="{{ dashLearner.closeSidebar }}"></div>
+
+  <aside class="gm-dl-dash-sidebar {{ dashLearner.sidebarOpenClass }}" style="width:260px;background:linear-gradient(180deg,#3C0960 0%,#4B0A77 100%);display:flex;flex-direction:column;padding:26px 18px;height:100vh">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 10px 26px">
+      <div style="background:#fff;display:inline-block;padding:8px 12px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:26px;display:block"></div>
+      <button class="gm-dl-dash-close" onClick="{{ dashLearner.closeSidebar }}" style="display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border:none;border-radius:10px;width:34px;height:34px;cursor:pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:4px;margin-top:6px">
+      <sc-for list="{{ dashLearner.navItems }}" as="item" hint-placeholder-count="4">
+        <a href="{{ item.href }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:{{ item.color }};background:{{ item.bg }};font-weight:600;font-size:14.5px" style-hover="background:rgba(255,255,255,0.1)">
+          {{ item.icon }}
+          <span>{{ item.label }}</span>
+        </a>
+      </sc-for>
+    </nav>
+  </aside>
+
+  <main style="flex:1;min-width:0;padding:28px 40px 60px;max-width:1240px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:28px">
+      <button class="gm-dl-dash-toggle" onClick="{{ dashLearner.toggleSidebar }}" style="display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #EBE6F1;border-radius:10px;width:38px;height:38px;cursor:pointer;box-shadow:0 4px 12px rgba(60,9,96,0.08)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C1947" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <details style="position:relative">
+        <summary style="display:flex;align-items:center;gap:9px;list-style:none">
+          <div style="width:40px;height:40px;border-radius:50%;background:#EDE1F6;display:flex;align-items:center;justify-content:center;overflow:hidden;border:2px solid #fff;box-shadow:0 0 0 1.5px #D8C7EE">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#7A189A"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C5470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:180px;z-index:10">
+          <a href="#" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Profile</a>
+          <a href="Home.dc.html" onClick="{{ dashLearner.handleLogout }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Log out</a>
+        </div>
+      </details>
+    </div>
+
+    <div>
+      <div style="background:linear-gradient(120deg,#4B0A77,#7A189A);border-radius:22px;padding:32px 34px;color:#fff;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.06)"></div>
+        <div style="position:relative;max-width:620px;min-width:0">
+          <h1 style="font-size:26px;font-weight:800">{{ dashLearner.greeting }}</h1>
+          <p style="font-size:15px;color:rgba(255,255,255,0.82);margin-top:10px;line-height:1.6">Ready to start your first course? Browse what's available and dive in.</p>
+<a href="Courses.dc.html" style="display:inline-flex;white-space:nowrap;margin-top:20px;background:#FFC02E;color:#3C0960;font-weight:800;font-size:14.5px;padding:12px 24px;border-radius:12px" style-hover="background:#fff">Browse courses</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.1fr 2fr;gap:22px;margin-top:24px;min-width:0" class="gm-dl-progress-grid">
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:20px;padding:26px;box-shadow:0 8px 24px rgba(60,9,96,0.05);min-width:0">
+          <h3 style="font-size:16px;font-weight:800;color:#2C1947">Your progress</h3>
+<div style="display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:20px;min-width:0">
+            <div style="width:110px;height:110px;border-radius:50%;background:#EFEAF4;display:flex;align-items:center;justify-content:center;flex:none">
+              <div style="width:74px;height:74px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans';font-weight:800;font-size:20px;color:#2C1947">0</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;width:100%">
+              <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#2C1947;white-space:nowrap"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#600C90"></span>Completed — 0</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#2C1947;white-space:nowrap"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#FB8C18"></span>Ongoing — 0</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#2C1947;white-space:nowrap"><span style="flex:none;width:9px;height:9px;border-radius:50%;background:#E4DCEF"></span>Unattempted — 0</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:20px;padding:26px;box-shadow:0 8px 24px rgba(60,9,96,0.05);min-width:0">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:16px;font-weight:800;color:#2C1947">Your courses</h3>
+            <div style="display:flex;gap:6px;background:#F6EFFB;padding:4px;border-radius:10px">
+              <button onClick="{{ dashLearner.tabOngoing }}" style="border:none;cursor:pointer;padding:7px 14px;border-radius:8px;font-size:13px;font-weight:700;color:{{ tabBtnOngoing.color }};background:{{ tabBtnOngoing.bg }}">Ongoing</button>
+              <button onClick="{{ dashLearner.tabCompleted }}" style="border:none;cursor:pointer;padding:7px 14px;border-radius:8px;font-size:13px;font-weight:700;color:{{ tabBtnCompleted.color }};background:{{ tabBtnCompleted.bg }}">Completed</button>
+              <button onClick="{{ dashLearner.tabUnattempted }}" style="border:none;cursor:pointer;padding:7px 14px;border-radius:8px;font-size:13px;font-weight:700;color:{{ tabBtnUnattempted.color }};background:{{ tabBtnUnattempted.bg }}">Unattempted</button>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 16px;color:#8A7F9C;min-width:0">
+            <div style="width:56px;height:56px;border-radius:14px;background:#F6EFFB;display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex:none">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B7A6C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15.5A2.5 2.5 0 0 1 16.5 21H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M8 8h9M8 12h6"/></svg>
+            </div>
+            <div style="font-size:14.5px;font-weight:700;color:#5C5470;line-height:1.4">No course enrolled</div>
+            <div style="font-size:13px;margin-top:8px;max-width:260px;line-height:1.6;word-wrap:break-word">Courses you start will show up here, sorted by status.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+</sc-if>
+
+<sc-if value="{{ isRouteDashInstructor }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="display:flex;min-height:100vh;background:#FBFAFD">
+
+  <div class="gm-di-dash-overlay {{ dashInstructor.sidebarOpenClass }}" onClick="{{ dashInstructor.closeSidebar }}"></div>
+
+  <aside class="gm-di-dash-sidebar {{ dashInstructor.sidebarOpenClass }}" style="width:260px;background:linear-gradient(180deg,#3C0960 0%,#4B0A77 100%);display:flex;flex-direction:column;padding:26px 18px;height:100vh">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 10px 26px">
+      <div style="background:#fff;display:inline-block;padding:8px 12px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:26px;display:block"></div>
+      <button class="gm-di-dash-close" onClick="{{ dashInstructor.closeSidebar }}" style="display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border:none;border-radius:10px;width:34px;height:34px;cursor:pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:4px;margin-top:6px">
+      <sc-for list="{{ dashInstructor.navItems }}" as="item" hint-placeholder-count="4">
+        <a href="{{ item.href }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:{{ item.color }};background:{{ item.bg }};font-weight:600;font-size:14.5px" style-hover="background:rgba(255,255,255,0.1)">
+          {{ item.icon }}
+          <span>{{ item.label }}</span>
+        </a>
+      </sc-for>
+    </nav>
+  </aside>
+
+  <main style="flex:1;min-width:0;padding:28px 40px 60px;max-width:1240px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:28px">
+      <button class="gm-di-dash-toggle" onClick="{{ dashInstructor.toggleSidebar }}" style="display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #EBE6F1;border-radius:10px;width:38px;height:38px;cursor:pointer;box-shadow:0 4px 12px rgba(60,9,96,0.08)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C1947" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <details style="position:relative">
+        <summary style="display:flex;align-items:center;gap:9px;list-style:none">
+          <div style="width:40px;height:40px;border-radius:50%;background:#EDE1F6;display:flex;align-items:center;justify-content:center;overflow:hidden;border:2px solid #fff;box-shadow:0 0 0 1.5px #D8C7EE">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#7A189A"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C5470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:180px;z-index:10">
+          <a href="#" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Profile</a>
+          <a href="Home.dc.html" onClick="{{ dashInstructor.handleLogout }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Log out</a>
+        </div>
+      </details>
+    </div>
+
+    <div>
+      <div style="background:linear-gradient(120deg,#4B0A77,#7A189A);border-radius:22px;padding:32px 34px;color:#fff;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.06)"></div>
+        <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px">
+          <div style="max-width:520px">
+            <h1 style="font-size:26px;font-weight:800">{{ dashInstructor.greeting }}</h1>
+            <p style="font-size:15px;color:rgba(255,255,255,0.82);margin-top:10px;line-height:1.6">Create your first course to start reaching learners.</p>
+          </div>
+          <div style="display:flex;gap:26px">
+            <div><div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:24px;color:#FFC02E">0</div><div style="font-size:12.5px;color:rgba(255,255,255,0.75)">Students</div></div>
+            <div><div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:24px;color:#FFC02E">0</div><div style="font-size:12.5px;color:rgba(255,255,255,0.75)">Courses</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:28px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="font-size:18px;font-weight:800;color:#2C1947">My courses</h3>
+          <a href="#" style="background:#FB8C18;color:#fff;font-weight:800;font-size:13.5px;padding:10px 18px;border-radius:10px" style-hover="background:#e07d10">+ Create course</a>
+        </div>
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;margin-top:16px;box-shadow:0 8px 24px rgba(60,9,96,0.05);padding:40px 10px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#8A7F9C">
+          <div style="width:56px;height:56px;border-radius:14px;background:#F6EFFB;display:flex;align-items:center;justify-content:center;margin-bottom:14px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B7A6C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15.5A2.5 2.5 0 0 1 16.5 21H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M8 8h9M8 12h6"/></svg>
+          </div>
+          <div style="font-size:14.5px;font-weight:700;color:#5C5470">No courses created yet</div>
+          <div style="font-size:13px;margin-top:4px;max-width:280px">Courses you create will appear here with enrollment counts.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;margin-top:28px;box-shadow:0 8px 24px rgba(60,9,96,0.05);overflow:hidden">
+        <div style="padding:20px 22px"><h3 style="font-size:16px;font-weight:800;color:#2C1947">Student roster</h3></div>
+        <div style="padding:0 10px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#8A7F9C">
+          <div style="font-size:14.5px;font-weight:700;color:#5C5470">No students enrolled yet</div>
+          <div style="font-size:13px;margin-top:4px;max-width:280px">Once learners join your courses, they'll show up here.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+</sc-if>
+
+<sc-if value="{{ isRouteDashOrg }}" hint-placeholder-val="{{ false }}">
+
+
+<div style="display:flex;min-height:100vh;background:#FBFAFD">
+
+  <div class="gm-dop-dash-overlay {{ dashOrg.sidebarOpenClass }}" onClick="{{ dashOrg.closeSidebar }}"></div>
+
+  <aside class="gm-dop-dash-sidebar {{ dashOrg.sidebarOpenClass }}" style="width:260px;background:linear-gradient(180deg,#3C0960 0%,#4B0A77 100%);display:flex;flex-direction:column;padding:26px 18px;height:100vh">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 10px 26px">
+      <div style="background:#fff;display:inline-block;padding:8px 12px;border-radius:12px"><img src="assets/gamai-logo.png" alt="Gamai" style="height:26px;display:block"></div>
+      <button class="gm-dop-dash-close" onClick="{{ dashOrg.closeSidebar }}" style="display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border:none;border-radius:10px;width:34px;height:34px;cursor:pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:4px;margin-top:6px">
+      <sc-for list="{{ dashOrg.navItems }}" as="item" hint-placeholder-count="3">
+        <a href="{{ item.href }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:{{ item.color }};background:{{ item.bg }};font-weight:600;font-size:14.5px" style-hover="background:rgba(255,255,255,0.1)">
+          {{ item.icon }}
+          <span>{{ item.label }}</span>
+        </a>
+      </sc-for>
+    </nav>
+  </aside>
+
+  <main style="flex:1;min-width:0;padding:28px 40px 60px;max-width:1240px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:28px">
+      <button class="gm-dop-dash-toggle" onClick="{{ dashOrg.toggleSidebar }}" style="display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #EBE6F1;border-radius:10px;width:38px;height:38px;cursor:pointer;box-shadow:0 4px 12px rgba(60,9,96,0.08)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C1947" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <details style="position:relative">
+        <summary style="display:flex;align-items:center;gap:9px;list-style:none">
+          <div style="width:40px;height:40px;border-radius:50%;background:#EDE1F6;display:flex;align-items:center;justify-content:center;overflow:hidden;border:2px solid #fff;box-shadow:0 0 0 1.5px #D8C7EE">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#7A189A"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5C5470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div style="position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid #EBE6F1;border-radius:14px;box-shadow:0 14px 34px rgba(60,9,96,0.18);padding:8px;min-width:180px;z-index:10">
+          <a href="#" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Profile</a>
+          <a href="Home.dc.html" onClick="{{ dashOrg.handleLogout }}" style="display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:#3F2B57" style-hover="background:#F4EDFB;color:#600C90">Log out</a>
+        </div>
+      </details>
+    </div>
+
+    <div>
+      <div style="background:linear-gradient(120deg,#4B0A77,#7A189A);border-radius:22px;padding:32px 34px;color:#fff;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.06)"></div>
+        <div style="position:relative"><h1 style="font-size:26px;font-weight:800">{{ dashOrg.greeting }}</h1>
+        <p style="font-size:15px;color:rgba(255,255,255,0.82);margin-top:10px;line-height:1.6">Assign your first course to start tracking your team's learning.</p></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;min-width:0" class="gm-dop-org-stats-grid">
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(60,9,96,0.05)">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:28px;color:#600C90">0</div>
+          <div style="font-size:13.5px;color:#5C5470;margin-top:6px;font-weight:600">Employees enrolled</div>
+        </div>
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(60,9,96,0.05)">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:28px;color:#600C90">0</div>
+          <div style="font-size:13.5px;color:#5C5470;margin-top:6px;font-weight:600">Active learners</div>
+        </div>
+        <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(60,9,96,0.05)">
+          <div style="font-family:'Plus Jakarta Sans';font-weight:800;font-size:28px;color:#600C90">0%</div>
+          <div style="font-size:13.5px;color:#5C5470;margin-top:6px;font-weight:600">Average completion</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EBE6F1;border-radius:18px;margin-top:24px;box-shadow:0 8px 24px rgba(60,9,96,0.05);overflow:hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 22px">
+          <h3 style="font-size:16px;font-weight:800;color:#2C1947">Course assignment</h3>
+          <a href="#" style="background:#FB8C18;color:#fff;font-weight:800;font-size:13.5px;padding:10px 18px;border-radius:10px" style-hover="background:#e07d10">+ Assign course</a>
+        </div>
+        <div style="padding:0 10px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#8A7F9C">
+          <div style="width:56px;height:56px;border-radius:14px;background:#F6EFFB;display:flex;align-items:center;justify-content:center;margin-bottom:14px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B7A6C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+          </div>
+          <div style="font-size:14.5px;font-weight:700;color:#5C5470">No employees added yet</div>
+          <div style="font-size:13px;margin-top:4px;max-width:280px">Add employees and assign them courses to see progress here.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+</sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+
+class Component extends DCLogic {
+  firstNameRef = React.createRef();
+  institutionNameRef = React.createRef();
+  state = { route: "home", mobileMenuOpen: false, sidebarOpen: false, learnerTab: "ongoing", slideStep: 0 };
+
+  static ROUTE_MAP = {
+    "home.dc.html": "home", "courses.dc.html": "courses", "about.dc.html": "about",
+    "sign up - learner.dc.html": "signupLearner", "sign up - instructor.dc.html": "signupInstructor", "sign up - organisation.dc.html": "signupOrg",
+    "dashboard - learner.dc.html": "dashboardLearner", "dashboard - instructor.dc.html": "dashboardInstructor", "dashboard - organization.dc.html": "dashboardOrganization",
+  };
+
+  componentDidMount() {
+    this._onDocClick = (e) => {
+      const a = e.target.closest && e.target.closest("a");
+      if (!a) return;
+      const href = a.getAttribute("href") || "";
+      if (!href || /^https?:|^mailto:|^tel:/i.test(href)) return;
+      const [pathPart, hashPart] = href.split("#");
+      const fileName = (pathPart || "").trim().toLowerCase();
+      if (!fileName) return;
+      const route = Component.ROUTE_MAP[fileName];
+      if (!route) return;
+      e.preventDefault();
+      this.setState({ route });
+      if (hashPart) {
+        setTimeout(() => { const el = document.getElementById(hashPart); if (el) el.scrollIntoView({ behavior: "smooth" }); }, 60);
+      } else {
+        window.scrollTo(0, 0);
+      }
+    };
+    document.addEventListener("click", this._onDocClick);
+    this._slideTimer = setInterval(() => this.setState(s => ({ slideStep: s.slideStep + 1 })), 3500);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("click", this._onDocClick);
+    clearInterval(this._slideTimer);
+  }
+
+  renderVals() {
+    const raw = (s) => React.createElement("span", { style: { display: "inline-flex", lineHeight: 0 }, dangerouslySetInnerHTML: { __html: s } });
+    const ic19 = (p) => raw(`<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`);
+    const ic26 = (p) => raw(`<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#600C90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`);
+
+    let session = null;
+    try { session = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("gamai_session") || "null") : null; } catch (e) { session = null; }
+    const dashboardHrefByRole = { learner: "Dashboard - Learner.dc.html", instructor: "Dashboard - Instructor.dc.html", organization: "Dashboard - Organization.dc.html" };
+    const isLoggedIn = !!session;
+    const isLoggedOut = !session;
+    const dashboardHref = session ? (dashboardHrefByRole[session.role] || "Dashboard - Learner.dc.html") : "Home.dc.html";
+    const isMobileMenuOpen = this.state.mobileMenuOpen;
+    const toggleMobileMenu = () => this.setState(s => ({ mobileMenuOpen: !s.mobileMenuOpen }));
+    const handleLogout = (e) => { e.preventDefault(); try { localStorage.removeItem("gamai_session"); } catch (err) {} this.setState({ route: "home", mobileMenuOpen: false }); window.scrollTo(0, 0); };
+    const shared = { isLoggedIn, isLoggedOut, dashboardHref, isMobileMenuOpen, toggleMobileMenu, handleLogout };
+
+    const greeting = session && session.name ? `Welcome, ${session.name}! 👋` : "Welcome! 👋";
+
+    const handleCreateLearner = (e) => {
+      e.preventDefault();
+      const name = (this.firstNameRef.current && this.firstNameRef.current.value.trim()) || "";
+      localStorage.setItem("gamai_session", JSON.stringify({ name, role: "learner" }));
+      this.setState({ route: "dashboardLearner" }); window.scrollTo(0, 0);
+    };
+    const handleCreateInstructor = (e) => {
+      e.preventDefault();
+      const name = (this.firstNameRef.current && this.firstNameRef.current.value.trim()) || "";
+      localStorage.setItem("gamai_session", JSON.stringify({ name, role: "instructor" }));
+      this.setState({ route: "dashboardInstructor" }); window.scrollTo(0, 0);
+    };
+    const handleCreateOrganisation = (e) => {
+      e.preventDefault();
+      const name = (this.institutionNameRef.current && this.institutionNameRef.current.value.trim()) || "";
+      localStorage.setItem("gamai_session", JSON.stringify({ name, role: "organization" }));
+      this.setState({ route: "dashboardOrganization" }); window.scrollTo(0, 0);
+    };
+
+    const tabBtn = (key) => ({ color: this.state.learnerTab === key ? "#600C90" : "#7A7188", bg: this.state.learnerTab === key ? "#fff" : "transparent" });
+
+    const dashItems = (items) => items.map((it, i) => ({ ...it, href: it.href || "#", color: i === 0 ? "#fff" : "rgba(255,255,255,0.72)", bg: i === 0 ? "rgba(255,255,255,0.14)" : "transparent" }));
+
+    return {
+      route: this.state.route,
+      isRouteHome: this.state.route === "home",
+      isRouteCourses: this.state.route === "courses",
+      isRouteAbout: this.state.route === "about",
+      isRouteSignupLearner: this.state.route === "signupLearner",
+      isRouteSignupInstructor: this.state.route === "signupInstructor",
+      isRouteSignupOrg: this.state.route === "signupOrg",
+      isRouteDashLearner: this.state.route === "dashboardLearner",
+      isRouteDashInstructor: this.state.route === "dashboardInstructor",
+      isRouteDashOrg: this.state.route === "dashboardOrganization",
+
+      home: {
+        ...shared,
+        year: new Date().getFullYear(),
+        showTrustStats: true,
+        coreValues: [
+          { n: "01", title: "Academic Progression Support", body: "Structured guidance that moves learners forward year over year, not just one course at a time.", span: "span 1", accent: "linear-gradient(90deg,#FB8C18,#FFC02E)", accentSoft: "#FFF1D6", accentText: "#B4650F" },
+          { n: "02", title: "Beyond Skills Acquisition", body: "Learning that goes past certificates — building judgment, confidence and the ability to apply what's learned.", span: "span 1", accent: "linear-gradient(90deg,#600C90,#7A189A)", accentSoft: "#F1E4FB", accentText: "#600C90" },
+          { n: "03", title: "Real-World Project Exposure", body: "Coursework grounded in actual projects, so learners practice on work that resembles what they'll face on the job.", span: "span 1", accent: "linear-gradient(90deg,#7A189A,#4B0A77)", accentSoft: "#EDE1F6", accentText: "#4B0A77" },
+          { n: "04", title: "Job Readiness Focus", body: "Every track is built with an end goal in mind: a learner who is genuinely ready to be hired or deployed.", span: "span 1", accent: "linear-gradient(90deg,#FFC02E,#FB8C18)", accentSoft: "#FFF1D6", accentText: "#B4650F" },
+          { n: "05", title: "End-to-End Talent Development", body: "From first lesson to first placement — one continuous journey, not a series of disconnected programs.", span: "span 1", accent: "linear-gradient(90deg,#4B0A77,#600C90)", accentSoft: "#EDE1F6", accentText: "#4B0A77" },
+          { n: "06", title: "Performance-Driven Feedback", body: "Intelligent assessment and analytics that show learners, tutors and institutions exactly where progress stands.", span: "span 1", accent: "linear-gradient(90deg,#600C90,#FB8C18)", accentSoft: "#F1E4FB", accentText: "#600C90" },
+        ],
+        quickCats: [
+          { label: "Tutoring", href: "About.dc.html#contact", bg: "#F1E4FB", icon: ic26('<path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.42A12 12 0 0 1 12 19a12 12 0 0 1-6.16-8.42L12 14z"/>') },
+          { label: "E-Content", href: "Courses.dc.html", bg: "#FFF1D6", icon: raw('<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FB8C18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>') },
+          { label: "Exam Prep", href: "About.dc.html#contact", bg: "#F1E4FB", icon: ic26('<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>') },
+          { label: "Tech Skills", href: "Courses.dc.html", bg: "#FFF1D6", icon: raw('<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FB8C18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>') },
+          { label: "Certificates", href: "Courses.dc.html", bg: "#F1E4FB", icon: ic26('<circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/>') },
+        ],
+        ecosystem: [
+          { n: "1", title: "Skills-to-opportunity platform", body: "One platform that takes learners from building a skill to putting it to work.", bg: "#600C90" },
+          { n: "2", title: "Learning → practice → opportunity", body: "A clear path — learn a skill, practice it on real work, then step into an opportunity.", bg: "#7A189A" },
+          { n: "3", title: "Hands-on internship experience", body: "Virtual and physical internships that turn coursework into real, applied experience.", bg: "#FB8C18" },
+          { n: "4", title: "Employment opportunities", body: "Graduate into roles and placements matched to the skills you've built.", bg: "#3C0960" },
+        ],
+        learnerCats: [
+          { id: "lc-k12", kicker: "K-12", tag: "#FFC02E", title: "School students", placeholder: "Drop a K-12 student photo", body: "Lessons mapped to the school curriculum, plus tutors for the subjects that need a boost.", bubble: "" },
+          { id: "lc-exam", kicker: "WAEC · JAMB · NECO", tag: "#FFC02E", title: "Exam candidates", placeholder: "Drop an exam candidate photo", body: "Focused prep, past questions and tutors to walk in confident on exam day.", bubble: "“Can a tutor help me get an A1 in maths?”" },
+          { id: "lc-uni", kicker: "Higher ed", tag: "#FFC02E", title: "University students", placeholder: "Drop a university student photo", body: "Academic support, assignments help and skills that make your CV stand out.", bubble: "" },
+          { id: "lc-career", kicker: "Career switch", tag: "#FFC02E", title: "Career changers", placeholder: "Drop a professional's photo", body: "Reskill at your own pace with guided paths and mentors who've made the leap.", bubble: "“I'm a career banker — can I switch into UX design?”" },
+          { id: "lc-tech", kicker: "Creative & tech", tag: "#FFC02E", title: "Tech & creative learners", placeholder: "Drop a designer/coder photo", body: "Graphics design, coding and digital skills with real projects, not just theory.", bubble: "" },
+          { id: "lc-parent", kicker: "Parents", tag: "#FFC02E", title: "Parents & guardians", placeholder: "Drop a parent + child photo", body: "Track progress, book trusted tutors and stay involved in your child's learning.", bubble: "" },
+        ],
+        tutorPerks: [
+          { t: "K-12 subjects", d: "Maths, sciences, languages & more" },
+          { t: "External exams", d: "WAEC, JAMB, NECO, IGCSE, SAT" },
+          { t: "Academic support", d: "Homework, projects & revision help" },
+          { t: "1:1 or group", d: "Online or hybrid in-person sessions" },
+        ],
+        courses: [
+          { cat: "STEM", cat_color: "#FB8C18", bar: "linear-gradient(90deg,#FB8C18,#FFC02E)", rating: "4.9", title: "STEM and Robotics", body: "Hands-on science, coding and robotics projects for curious young minds.", meta: "K-12 · Self-paced", price: "Enroll" },
+          { cat: "Professional", cat_color: "#600C90", bar: "linear-gradient(90deg,#600C90,#7A189A)", rating: "4.8", title: "Project Management Professionals (PMP) by PMI", body: "PMI-aligned prep to earn the globally recognised PMP certification.", meta: "Professional · Cohort", price: "Enroll" },
+          { cat: "Tech", cat_color: "#FB8C18", bar: "linear-gradient(90deg,#FB8C18,#FFC02E)", rating: "4.8", title: "Software Testing", body: "Manual and automated testing skills to launch a career in QA.", meta: "Beginner · Self-paced", price: "Enroll" },
+          { cat: "Design", cat_color: "#600C90", bar: "linear-gradient(90deg,#600C90,#7A189A)", rating: "4.9", title: "Web Design for Beginners", body: "Build modern, responsive websites from the ground up — no experience needed.", meta: "Beginner · Self-paced", price: "Enroll" },
+          { cat: "Data", cat_color: "#FB8C18", bar: "linear-gradient(90deg,#FB8C18,#FFC02E)", rating: "4.8", title: "Data Analytics with Python or Excel", body: "Clean, analyse and visualise data to turn numbers into decisions.", meta: "Intermediate · Self-paced", price: "Enroll" },
+          { cat: "Design", cat_color: "#600C90", bar: "linear-gradient(90deg,#600C90,#7A189A)", rating: "4.9", title: "Product Design", body: "UX/UI fundamentals, wireframing and prototyping to design products people love.", meta: "Beginner · Self-paced", price: "Enroll" },
+        ],
+        exams: ["WAEC", "JAMB / UTME", "NECO", "IGCSE", "SAT", "Post-UTME", "Common Entrance"],
+        socials: [
+          raw('<svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>'),
+          raw('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,0.85)"/></svg>'),
+          raw('<svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M22 5.8a8.5 8.5 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.7 11.7 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.6a11.7 11.7 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5A8.3 8.3 0 0 0 22 5.8z"/></svg>'),
+          raw('<svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.85)"><path d="M22.5 6.2a2.8 2.8 0 0 0-2-2C18.8 3.7 12 3.7 12 3.7s-6.8 0-8.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.8 2.8 2.8 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.8zM10 15.5v-7l6 3.5z"/></svg>'),
+        ],
+      },
+
+      coursesPage: {
+        ...shared,
+        courses: [
+          { id: "co-1", ph: "STEM & Robotics", src: "assets/stem-robotics.png", title: "STEM & Robotics", body: "Hands-on science, coding and robotics projects for curious young minds.", meta: "Beginner · 8 wks", rating: "4.9" },
+          { id: "co-2", ph: "PMP certification", src: "assets/pmp-certification.png", title: "Project Management Professionals (PMP) by PMI", body: "PMI-aligned prep to earn the globally recognised PMP certification.", meta: "Beginner · 7 wks", rating: "4.8" },
+          { id: "co-3", ph: "Software Testing", src: "assets/software-testing.png", title: "Software Testing", body: "Manual and automated testing skills to launch a career in QA.", meta: "Beginner · 12 wks", rating: "4.9" },
+          { id: "co-4", ph: "Web Design for Beginners", src: "assets/web-design.png", title: "Web Design for Beginners", body: "Build modern, responsive websites from the ground up — no experience needed.", meta: "Intermediate · 6 wks", rating: "4.8" },
+          { id: "co-5", ph: "Data Analytics with Python or Excel", src: "assets/data-analytics.png", title: "Data Analytics with Python or Excel", body: "Clean, analyse and visualise data to turn numbers into decisions.", meta: "Exam prep · 10 wks", rating: "4.8" },
+          { id: "co-6", ph: "Product Design", src: "assets/product-design.png", title: "Product Design", body: "UX/UI fundamentals, wireframing and prototyping to design products people love.", meta: "K-12 · Self-paced", rating: "4.7" },
+          { id: "co-7", ph: "Animation", src: "assets/animation.png", title: "Animation", body: "Storyboard, animate and bring characters to life with industry-standard 2D and 3D tools.", meta: "Exam prep · 9 wks", rating: "4.9" },
+          { id: "co-8", ph: "Digital marketing", cat: "Data & Business", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Digital Marketing 101", body: "Social media, content and ads — grow a brand from zero.", meta: "Beginner · 5 wks", rating: "4.7" },
+          { id: "co-9", ph: "Python coding", cat: "Coding & Tech", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Python for Beginners", body: "Programming foundations with hands-on mini-projects.", meta: "Beginner · 8 wks", rating: "4.9" },
+        ],
+        paths: [
+          { emoji: "🎨", iconbg: "#FFF1D6", title: "Graphics Designer", body: "Master design tools, branding and layout, then build a client-ready portfolio.", courses: "5 courses", length: "3 months" },
+          { emoji: "💻", iconbg: "#F1E4FB", title: "Web Developer", body: "Go from HTML basics to building and deploying full responsive websites.", courses: "6 courses", length: "4 months" },
+          { emoji: "📊", iconbg: "#FFF1D6", title: "Data Analyst", body: "Excel, SQL and visualisation skills to turn data into decisions.", courses: "5 courses", length: "3 months" },
+        ],
+      },
+
+      aboutPage: {
+        ...shared,
+        stats: [
+          { n: "10+", l: "Years of Excellence" },
+          { n: "50+", l: "Team Members" },
+          { n: "10,000+", l: "Trained Professionals" },
+          { n: "100+", l: "Enterprise Clients" },
+        ],
+        values: [
+          { emoji: "🎯", bg: "#F1E4FB", t: "Access for all", d: "Quality learning that's affordable and reaches every learner." },
+          { emoji: "✨", bg: "#FFF1D6", t: "Real outcomes", d: "We measure success by grades, skills and careers — not hours watched." },
+          { emoji: "🤝", bg: "#F1E4FB", t: "Trusted tutors", d: "Every tutor is verified, reviewed and held to a high standard." },
+          { emoji: "🚀", bg: "#FFF1D6", t: "Always improving", d: "AI and feedback keep our content and matching getting better." },
+        ],
+        contacts: [
+          { emoji: "🌐", label: "Website", value: "www.gamai.com.ng" },
+          { emoji: "✉️", label: "Email", value: "info@gamai.com.ng" },
+          { emoji: "📞", label: "Phone", value: "+234 809 722 7051" },
+          { emoji: "📍", label: "Office", value: "Yaba, Lagos, Nigeria" },
+        ],
+      },
+
+      signupLearner: { firstNameRef: this.firstNameRef, handleCreate: handleCreateLearner },
+      signupInstructor: { firstNameRef: this.firstNameRef, handleCreate: handleCreateInstructor },
+      signupOrg: { institutionNameRef: this.institutionNameRef, handleCreate: handleCreateOrganisation },
+
+      dashLearner: {
+        greeting, handleLogout,
+        sidebarOpenClass: this.state.sidebarOpen ? "gm-dl-open" : "",
+        toggleSidebar: () => this.setState(s => ({ sidebarOpen: !s.sidebarOpen })),
+        closeSidebar: () => this.setState({ sidebarOpen: false }),
+        learnerTab: this.state.learnerTab,
+        tabOngoing: () => this.setState({ learnerTab: "ongoing" }),
+        tabCompleted: () => this.setState({ learnerTab: "completed" }),
+        tabUnattempted: () => this.setState({ learnerTab: "unattempted" }),
+        tabBtnOngoing: tabBtn("ongoing"), tabBtnCompleted: tabBtn("completed"), tabBtnUnattempted: tabBtn("unattempted"),
+        navItems: dashItems([
+          { label: "Overview", icon: ic19('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>') },
+          { label: "My Courses", icon: ic19('<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15.5A2.5 2.5 0 0 1 16.5 21H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M8 8h9M8 12h6"/>') },
+          { label: "Browse Courses", icon: ic19('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>') },
+          { label: "Certificates", icon: ic19('<circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5L17 21l-1.5-8.5"/>') },
+          { label: "Home", href: "Home.dc.html", icon: ic19('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>') },
+        ]),
+      },
+
+      dashInstructor: {
+        greeting, handleLogout,
+        sidebarOpenClass: this.state.sidebarOpen ? "gm-di-open" : "",
+        toggleSidebar: () => this.setState(s => ({ sidebarOpen: !s.sidebarOpen })),
+        closeSidebar: () => this.setState({ sidebarOpen: false }),
+        navItems: dashItems([
+          { label: "Overview", icon: ic19('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>') },
+          { label: "My Courses", icon: ic19('<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15.5A2.5 2.5 0 0 1 16.5 21H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M8 8h9M8 12h6"/>') },
+          { label: "Students", icon: ic19('<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="8.5" r="2.8"/><path d="M15 14.5c2.9.4 5 2.4 5.5 5.5"/>') },
+          { label: "Create Course", icon: ic19('<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>') },
+          { label: "Home", href: "Home.dc.html", icon: ic19('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>') },
+        ]),
+      },
+
+      dashOrg: {
+        greeting, handleLogout,
+        sidebarOpenClass: this.state.sidebarOpen ? "gm-dop-open" : "",
+        toggleSidebar: () => this.setState(s => ({ sidebarOpen: !s.sidebarOpen })),
+        closeSidebar: () => this.setState({ sidebarOpen: false }),
+        navItems: dashItems([
+          { label: "Overview", icon: ic19('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>') },
+          { label: "Team", icon: ic19('<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="8.5" r="2.8"/><path d="M15 14.5c2.9.4 5 2.4 5.5 5.5"/>') },
+          { label: "Course Assignment", icon: ic19('<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/>') },
+          { label: "Home", href: "Home.dc.html", icon: ic19('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>') },
+        ]),
+      },
+    };
+  }
+}
+
+</script>
+</body>
+</html>
