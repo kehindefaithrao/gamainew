@@ -222,7 +222,7 @@
       <div class="gm-home-nav-links" style="display:flex;gap:28px;margin-left:14px;font-weight:600;font-size:15px;color:#3F2B57">
         <a href="Home.dc.html" style="color:#600C90">Home</a>
         <a href="Courses.dc.html" style-hover="color:#600C90">Courses &amp; Skills</a>
-        <a href="About.dc.html" style-hover="color:#600C90">About</a>
+        <a href="About.dc.html" style-hover="color:#600C90">About us</a>
       </div>
       <div class="gm-home-nav-auth" style="margin-left:auto;display:flex;align-items:center;gap:18px">
         <sc-if value="{{ home.isLoggedIn }}" hint-placeholder-val="{{ false }}">
@@ -258,7 +258,7 @@
     <div style="border-top:1px solid #EBE6F1;padding:16px 28px;display:flex;flex-direction:column;gap:14px;background:#fff">
       <a href="Home.dc.html" style="font-weight:600;font-size:15px;color:#600C90">Home</a>
       <a href="Courses.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Courses &amp; Skills</a>
-      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">About</a>
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">About us</a>
       <div style="border-top:1px solid #EBE6F1;margin:4px 0"></div>
       <sc-if value="{{ home.isLoggedIn }}" hint-placeholder-val="{{ false }}">
       <a href="{{ home.dashboardHref }}" style="font-weight:600;font-size:15px;color:#3F2B57">Profile</a>
@@ -288,9 +288,9 @@
         <div class="gm-home-hero-search-row" style="display:flex;gap:12px;margin-top:36px;max-width:560px">
           <div style="flex:1;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(255,255,255,0.28);border-radius:14px;padding:14px 18px">
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#7A5A9A" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-            <input type="text" placeholder="Search courses — e.g. WAEC, Python, Data Analysis" style="background:transparent;border:none;outline:none;color:#2C1947;font-size:15px;width:100%;font-family:'Manrope'"/>
+            <input type="text" placeholder="Search courses — e.g. WAEC, Python, Data Analysis" value="{{ home.searchDraft }}" onChange="{{ home.onSearchChange }}" onKeyDown="{{ home.onSearchKeyDown }}" style="background:transparent;border:none;outline:none;color:#2C1947;font-size:15px;width:100%;font-family:'Manrope'"/>
           </div>
-          <a href="Courses.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;background:#FFC02E;color:#3C0960;font-weight:800;font-size:14.5px;padding:0 22px;border-radius:14px;white-space:nowrap" style-hover="background:#fff">View all courses</a>
+          <a href="Courses.dc.html" onClick="{{ home.onSearchSubmit }}" style="flex:none;display:flex;align-items:center;justify-content:center;background:#FFC02E;color:#3C0960;font-weight:800;font-size:14.5px;padding:0 22px;border-radius:14px;white-space:nowrap" style-hover="background:#fff">Search</a>
         </div>
       </div>
 
@@ -483,19 +483,18 @@
       </div>
       <div>
         <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Platform</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Online tutoring</a>
-          <a href="Courses.dc.html" style-hover="color:#FFC02E">Courses &amp; e-content</a>
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Exam prep</a>
-          <a href="Courses.dc.html" style-hover="color:#FFC02E">Tech &amp; creative skills</a>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <span style-hover="color:#FFC02E">Online tutoring</span>
+          <span style-hover="color:#FFC02E">Courses &amp; e-content</span>
+          <span style-hover="color:#FFC02E">Exam prep</span>
+          <span style-hover="color:#FFC02E">Tech &amp; creative skills</span>
         </div>
       </div>
       <div>
         <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Company</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
           <a href="About.dc.html" style-hover="color:#FFC02E">About us</a>
-          <a href="About.dc.html" style-hover="color:#FFC02E">Become a tutor</a>
-          <a href="About.dc.html" style-hover="color:#FFC02E">Contact</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Contact us</a>
         </div>
       </div>
       <div>
@@ -530,7 +529,7 @@
       <div class="gm-courses-nav-links" style="display:flex;gap:28px;margin-left:14px;font-weight:600;font-size:15px;color:#3F2B57">
         <a href="Home.dc.html" style-hover="color:#600C90">Home</a>
         <a href="Courses.dc.html" style="color:#600C90">Courses &amp; Skills</a>
-        <a href="About.dc.html" style-hover="color:#600C90">About</a>
+        <a href="About.dc.html" style-hover="color:#600C90">About us</a>
       </div>
       <div class="gm-courses-nav-auth" style="margin-left:auto;display:flex;align-items:center;gap:18px">
         <sc-if value="{{ coursesPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
@@ -566,7 +565,7 @@
     <div style="border-top:1px solid #EBE6F1;padding:16px 28px;display:flex;flex-direction:column;gap:14px;background:#fff">
       <a href="Home.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Home</a>
       <a href="Courses.dc.html" style="font-weight:600;font-size:15px;color:#600C90">Courses &amp; Skills</a>
-      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">About</a>
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">About us</a>
       <div style="border-top:1px solid #EBE6F1;margin:4px 0"></div>
       <sc-if value="{{ coursesPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
       <a href="{{ coursesPage.dashboardHref }}" style="font-weight:600;font-size:15px;color:#3F2B57">Profile</a>
@@ -595,6 +594,18 @@
 
   <!-- COURSE GRID -->
   <section style="max-width:1200px;margin:0 auto;padding:28px 28px 8px">
+    <sc-if value="{{ coursesPage.hasSearch }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap">
+      <p style="font-size:15px;color:#5C5470;margin:0">Results for “<span style="color:#2C1947;font-weight:800">{{ coursesPage.searchQuery }}</span>”</p>
+      <span onClick="{{ coursesPage.clearSearch }}" style="font-size:14px;font-weight:700;color:#600C90;cursor:pointer" style-hover="color:#FB8C18">Clear search ✕</span>
+    </div>
+    </sc-if>
+    <sc-if value="{{ coursesPage.noResults }}" hint-placeholder-val="{{ false }}">
+    <div style="text-align:center;padding:60px 20px;color:#5C5470">
+      <p style="font-size:17px;font-weight:700;color:#2C1947;margin:0 0 6px">No courses match “{{ coursesPage.searchQuery }}”</p>
+      <p style="font-size:14px;margin:0">Try a different keyword, or browse all courses below.</p>
+    </div>
+    </sc-if>
     <div class="gm-courses-courses-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
       <sc-for list="{{ coursesPage.courses }}" as="c" hint-placeholder-count="9">
         <div style="background:#fff;border:1px solid #EBE6F1;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(60,9,96,0.05)" style-hover="transform:translateY(-4px)">
@@ -653,20 +664,18 @@
       </div>
       <div>
         <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Platform</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Online tutoring</a>
-          <a href="Courses.dc.html" style-hover="color:#FFC02E">Courses &amp; e-content</a>
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Exam prep</a>
-          <a href="Courses.dc.html" style-hover="color:#FFC02E">Tech &amp; creative skills</a>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <span style-hover="color:#FFC02E">Online tutoring</span>
+          <span style-hover="color:#FFC02E">Courses &amp; e-content</span>
+          <span style-hover="color:#FFC02E">Exam prep</span>
+          <span style-hover="color:#FFC02E">Tech &amp; creative skills</span>
         </div>
       </div>
       <div>
         <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Company</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
           <a href="About.dc.html" style-hover="color:#FFC02E">About us</a>
-          <a href="Home.dc.html#schools" style-hover="color:#FFC02E">For schools</a>
-          <a href="About.dc.html" style-hover="color:#FFC02E">Become a tutor</a>
-          <a href="About.dc.html" style-hover="color:#FFC02E">Contact</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Contact us</a>
         </div>
       </div>
       <div>
@@ -701,7 +710,7 @@
       <div class="gm-about-nav-links" style="display:flex;gap:28px;margin-left:14px;font-weight:600;font-size:15px;color:#3F2B57">
         <a href="Home.dc.html" style-hover="color:#600C90">Home</a>
         <a href="Courses.dc.html" style-hover="color:#600C90">Courses &amp; Skills</a>
-        <a href="About.dc.html" style="color:#600C90">About</a>
+        <a href="About.dc.html" style="color:#600C90">About us</a>
       </div>
       <div class="gm-about-nav-auth" style="margin-left:auto;display:flex;align-items:center;gap:18px">
         <sc-if value="{{ aboutPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
@@ -737,7 +746,7 @@
     <div style="border-top:1px solid #EBE6F1;padding:16px 28px;display:flex;flex-direction:column;gap:14px;background:#fff">
       <a href="Home.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Home</a>
       <a href="Courses.dc.html" style="font-weight:600;font-size:15px;color:#3F2B57">Courses &amp; Skills</a>
-      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#600C90">About</a>
+      <a href="About.dc.html" style="font-weight:600;font-size:15px;color:#600C90">About us</a>
       <div style="border-top:1px solid #EBE6F1;margin:4px 0"></div>
       <sc-if value="{{ aboutPage.isLoggedIn }}" hint-placeholder-val="{{ false }}">
       <a href="{{ aboutPage.dashboardHref }}" style="font-weight:600;font-size:15px;color:#3F2B57">Profile</a>
@@ -987,20 +996,18 @@
       </div>
       <div>
         <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Platform</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Online tutoring</a>
-          <a href="Courses.dc.html" style-hover="color:#FFC02E">Courses &amp; e-content</a>
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Exam prep</a>
-          <a href="Courses.dc.html" style-hover="color:#FFC02E">Tech &amp; creative skills</a>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <span style-hover="color:#FFC02E">Online tutoring</span>
+          <span style-hover="color:#FFC02E">Courses &amp; e-content</span>
+          <span style-hover="color:#FFC02E">Exam prep</span>
+          <span style-hover="color:#FFC02E">Tech &amp; creative skills</span>
         </div>
       </div>
       <div>
         <div style="font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:15px;margin-bottom:14px">Company</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
           <a href="About.dc.html" style-hover="color:#FFC02E">About us</a>
-          <a href="Home.dc.html#schools" style-hover="color:#FFC02E">For schools</a>
-          <a href="About.dc.html" style-hover="color:#FFC02E">Become a tutor</a>
-          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Contact</a>
+          <a href="About.dc.html#contact" style-hover="color:#FFC02E">Contact us</a>
         </div>
       </div>
       <div>
@@ -1479,7 +1486,7 @@
 class Component extends DCLogic {
   firstNameRef = React.createRef();
   institutionNameRef = React.createRef();
-  state = { route: "home", mobileMenuOpen: false, sidebarOpen: false, learnerTab: "ongoing", slideStep: 0 };
+  state = { route: "home", mobileMenuOpen: false, sidebarOpen: false, learnerTab: "ongoing", slideStep: 0, searchQuery: "", searchDraft: "" };
 
   static ROUTE_MAP = {
     "home.dc.html": "home", "courses.dc.html": "courses", "about.dc.html": "about",
@@ -1527,6 +1534,11 @@ class Component extends DCLogic {
     const dashboardHref = session ? (dashboardHrefByRole[session.role] || "Dashboard - Learner.dc.html") : "Home.dc.html";
     const isMobileMenuOpen = this.state.mobileMenuOpen;
     const toggleMobileMenu = () => this.setState(s => ({ mobileMenuOpen: !s.mobileMenuOpen }));
+    const onSearchChange = (e) => this.setState({ searchDraft: e.target.value });
+    const runSearch = () => { this.setState({ route: "courses", searchQuery: this.state.searchDraft.trim() }); window.scrollTo(0, 0); };
+    const onSearchSubmit = (e) => { e.preventDefault(); runSearch(); };
+    const onSearchKeyDown = (e) => { if (e.key === "Enter") { e.preventDefault(); runSearch(); } };
+    const clearSearch = () => this.setState({ searchQuery: "", searchDraft: "" });
     const handleLogout = (e) => { e.preventDefault(); try { localStorage.removeItem("gamai_session"); } catch (err) {} this.setState({ route: "home", mobileMenuOpen: false }); window.scrollTo(0, 0); };
     const shared = { isLoggedIn, isLoggedOut, dashboardHref, isMobileMenuOpen, toggleMobileMenu, handleLogout };
 
@@ -1571,6 +1583,10 @@ class Component extends DCLogic {
         ...shared,
         year: new Date().getFullYear(),
         showTrustStats: true,
+        searchDraft: this.state.searchDraft,
+        onSearchChange,
+        onSearchSubmit,
+        onSearchKeyDown,
         coreValues: [
           { n: "01", title: "Academic Progression Support", body: "Structured guidance that moves learners forward year over year, not just one course at a time.", span: "span 1", accent: "linear-gradient(90deg,#FB8C18,#FFC02E)", accentSoft: "#FFF1D6", accentText: "#B4650F" },
           { n: "02", title: "Beyond Skills Acquisition", body: "Learning that goes past certificates — building judgment, confidence and the ability to apply what's learned.", span: "span 1", accent: "linear-gradient(90deg,#600C90,#7A189A)", accentSoft: "#F1E4FB", accentText: "#600C90" },
@@ -1623,9 +1639,8 @@ class Component extends DCLogic {
         ],
       },
 
-      coursesPage: {
-        ...shared,
-        courses: [
+      coursesPage: (() => {
+        const allCourses = [
           { id: "co-1", ph: "STEM & Robotics", src: "assets/stem-robotics.png", title: "STEM & Robotics", body: "Hands-on science, coding and robotics projects for curious young minds.", meta: "Beginner · 8 wks", rating: "4.9" },
           { id: "co-2", ph: "PMP certification", src: "assets/pmp-certification.png", title: "Project Management Professionals (PMP) by PMI", body: "PMI-aligned prep to earn the globally recognised PMP certification.", meta: "Beginner · 7 wks", rating: "4.8" },
           { id: "co-3", ph: "Software Testing", src: "assets/software-testing.png", title: "Software Testing", body: "Manual and automated testing skills to launch a career in QA.", meta: "Beginner · 12 wks", rating: "4.9" },
@@ -1635,13 +1650,23 @@ class Component extends DCLogic {
           { id: "co-7", ph: "Animation", src: "assets/animation.png", title: "Animation", body: "Storyboard, animate and bring characters to life with industry-standard 2D and 3D tools.", meta: "Exam prep · 9 wks", rating: "4.9" },
           { id: "co-8", ph: "Digital marketing", cat: "Data & Business", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Digital Marketing 101", body: "Social media, content and ads — grow a brand from zero.", meta: "Beginner · 5 wks", rating: "4.7" },
           { id: "co-9", ph: "Python coding", cat: "Coding & Tech", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Python for Beginners", body: "Programming foundations with hands-on mini-projects.", meta: "Beginner · 8 wks", rating: "4.9" },
-        ],
-        paths: [
-          { emoji: "🎨", iconbg: "#FFF1D6", title: "Graphics Designer", body: "Master design tools, branding and layout, then build a client-ready portfolio.", courses: "5 courses", length: "3 months" },
-          { emoji: "💻", iconbg: "#F1E4FB", title: "Web Developer", body: "Go from HTML basics to building and deploying full responsive websites.", courses: "6 courses", length: "4 months" },
-          { emoji: "📊", iconbg: "#FFF1D6", title: "Data Analyst", body: "Excel, SQL and visualisation skills to turn data into decisions.", courses: "5 courses", length: "3 months" },
-        ],
-      },
+        ];
+        const q = (this.state.searchQuery || "").trim().toLowerCase();
+        const filtered = q ? allCourses.filter(c => (c.title + " " + c.body + " " + (c.meta || "") + " " + (c.cat || "")).toLowerCase().includes(q)) : allCourses;
+        return {
+          ...shared,
+          courses: filtered,
+          searchQuery: this.state.searchQuery,
+          hasSearch: !!q,
+          noResults: !!q && filtered.length === 0,
+          clearSearch,
+          paths: [
+            { emoji: "🎨", iconbg: "#FFF1D6", title: "Graphics Designer", body: "Master design tools, branding and layout, then build a client-ready portfolio.", courses: "5 courses", length: "3 months" },
+            { emoji: "💻", iconbg: "#F1E4FB", title: "Web Developer", body: "Go from HTML basics to building and deploying full responsive websites.", courses: "6 courses", length: "4 months" },
+            { emoji: "📊", iconbg: "#FFF1D6", title: "Data Analyst", body: "Excel, SQL and visualisation skills to turn data into decisions.", courses: "5 courses", length: "3 months" },
+          ],
+        };
+      })(),
 
       aboutPage: {
         ...shared,
