@@ -642,6 +642,14 @@
     </div>
   </section>
 
+  <!-- COURSE MODE TOGGLE -->
+  <section style="max-width:1200px;margin:0 auto;padding:28px 28px 0">
+    <div style="display:flex;justify-content:center;gap:36px">
+      <span onClick="{{ coursesPage.setInstructorMode }}" style="cursor:pointer;padding:0 2px 14px;font-size:16px;font-weight:800;color:{{ coursesPage.instructorColor }};border-bottom:3px solid {{ coursesPage.instructorBorder }}">Instructor-Led courses</span>
+      <span onClick="{{ coursesPage.setSelfMode }}" style="cursor:pointer;padding:0 2px 14px;font-size:16px;font-weight:800;color:{{ coursesPage.selfColor }};border-bottom:3px solid {{ coursesPage.selfBorder }}">Self-Learn courses</span>
+    </div>
+  </section>
+
   <!-- COURSE GRID -->
   <section style="max-width:1200px;margin:0 auto;padding:28px 28px 8px">
     <sc-if value="{{ coursesPage.hasSearch }}" hint-placeholder-val="{{ false }}">
@@ -673,6 +681,11 @@
         </div>
       </sc-for>
     </div>
+    <sc-if value="{{ coursesPage.isInstructorMode }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;justify-content:center;margin-top:36px">
+      <span style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;cursor:pointer;font-size:14.5px;font-weight:800;line-height:1.2;color:#600C90;background:#fff;border:1.5px solid #600C90;padding:12px 28px;border-radius:999px;transition:background 0.18s ease,color 0.18s ease" style-hover="background:#600C90;color:#fff">View more courses</span>
+    </div>
+    </sc-if>
   </section>
 
   <!-- LEARNING PATHS -->
@@ -1558,7 +1571,7 @@
 class Component extends DCLogic {
   firstNameRef = React.createRef();
   institutionNameRef = React.createRef();
-  state = { route: "home", mobileMenuOpen: false, sidebarOpen: false, learnerTab: "ongoing", slideStep: 0, searchQuery: "", searchDraft: "" };
+  state = { route: "home", mobileMenuOpen: false, sidebarOpen: false, learnerTab: "ongoing", slideStep: 0, searchQuery: "", searchDraft: "", courseMode: "instructor" };
 
   static ROUTE_MAP = {
     "home.dc.html": "home", "courses.dc.html": "courses", "about.dc.html": "about",
@@ -1713,18 +1726,20 @@ class Component extends DCLogic {
 
       coursesPage: (() => {
         const allCourses = [
-          { id: "co-1", ph: "STEM & Robotics", src: "assets/stem-robotics.png", title: "STEM & Robotics", body: "Hands-on science, coding and robotics projects for curious young minds.", meta: "Beginner · 8 wks", rating: "4.9" },
-          { id: "co-2", ph: "PMP certification", src: "assets/pmp-certification.png", title: "Project Management Professionals (PMP) by PMI", body: "PMI-aligned prep to earn the globally recognised PMP certification.", meta: "Beginner · 7 wks", rating: "4.8" },
-          { id: "co-3", ph: "Software Testing", src: "assets/software-testing.png", title: "Software Testing", body: "Manual and automated testing skills to launch a career in QA.", meta: "Beginner · 12 wks", rating: "4.9" },
-          { id: "co-4", ph: "Web Design for Beginners", src: "assets/web-design.png", title: "Web Design for Beginners", body: "Build modern, responsive websites from the ground up — no experience needed.", meta: "Intermediate · 6 wks", rating: "4.8" },
-          { id: "co-5", ph: "Data Analytics with Python or Excel", src: "assets/data-analytics.png", title: "Data Analytics with Python or Excel", body: "Clean, analyse and visualise data to turn numbers into decisions.", meta: "Exam prep · 10 wks", rating: "4.8" },
-          { id: "co-6", ph: "Product Design", src: "assets/product-design.png", title: "Product Design", body: "UX/UI fundamentals, wireframing and prototyping to design products people love.", meta: "K-12 · Self-paced", rating: "4.7" },
-          { id: "co-7", ph: "Animation", src: "assets/animation.png", title: "Animation", body: "Storyboard, animate and bring characters to life with industry-standard 2D and 3D tools.", meta: "Exam prep · 9 wks", rating: "4.9" },
-          { id: "co-8", ph: "Digital marketing", cat: "Data & Business", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Digital Marketing 101", body: "Social media, content and ads — grow a brand from zero.", meta: "Beginner · 5 wks", rating: "4.7" },
-          { id: "co-9", ph: "Python coding", cat: "Coding & Tech", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Python for Beginners", body: "Programming foundations with hands-on mini-projects.", meta: "Beginner · 8 wks", rating: "4.9" },
+          { id: "co-1", mode: "instructor", ph: "STEM & Robotics", src: "assets/stem-robotics.png", title: "STEM & Robotics", body: "Hands-on science, coding and robotics projects for curious young minds.", meta: "Beginner · 8 wks", rating: "4.9" },
+          { id: "co-2", mode: "instructor", ph: "PMP certification", src: "assets/pmp-certification.png", title: "Project Management Professionals (PMP) by PMI", body: "PMI-aligned prep to earn the globally recognised PMP certification.", meta: "Beginner · 7 wks", rating: "4.8" },
+          { id: "co-3", mode: "instructor", ph: "Software Testing", src: "assets/software-testing.png", title: "Software Testing", body: "Manual and automated testing skills to launch a career in QA.", meta: "Beginner · 12 wks", rating: "4.9" },
+          { id: "co-4", mode: "instructor", ph: "Web Design for Beginners", src: "assets/web-design.png", title: "Web Design for Beginners", body: "Build modern, responsive websites from the ground up — no experience needed.", meta: "Intermediate · 6 wks", rating: "4.8" },
+          { id: "co-5", mode: "instructor", ph: "Data Analytics with Python or Excel", src: "assets/data-analytics.png", title: "Data Analytics with Python or Excel", body: "Clean, analyse and visualise data to turn numbers into decisions.", meta: "Exam prep · 10 wks", rating: "4.8" },
+          { id: "co-6", mode: "instructor", ph: "Product Design", src: "assets/product-design.png", title: "Product Design", body: "UX/UI fundamentals, wireframing and prototyping to design products people love.", meta: "K-12 · Self-paced", rating: "4.7" },
+          { id: "co-7", mode: "instructor", ph: "Animation", src: "assets/animation.png", title: "Animation", body: "Storyboard, animate and bring characters to life with industry-standard 2D and 3D tools.", meta: "Exam prep · 9 wks", rating: "4.9" },
+          { id: "co-8", mode: "self", ph: "Digital marketing", cat: "Data & Business", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Digital Marketing 101", body: "Social media, content and ads — grow a brand from zero.", meta: "Beginner · 5 wks", rating: "4.7" },
+          { id: "co-9", mode: "self", ph: "Python coding", cat: "Coding & Tech", tagbg: "#EDE0FA", tagfg: "#600C90", title: "Python for Beginners", body: "Programming foundations with hands-on mini-projects.", meta: "Beginner · 8 wks", rating: "4.9" },
         ];
         const q = (this.state.searchQuery || "").trim().toLowerCase();
-        const filtered = q ? allCourses.filter(c => (c.title + " " + c.body + " " + (c.meta || "") + " " + (c.cat || "")).toLowerCase().includes(q)) : allCourses;
+        const mode = this.state.courseMode || "instructor";
+        const byMode = allCourses.filter(c => c.mode === mode);
+        const filtered = q ? byMode.filter(c => (c.title + " " + c.body + " " + (c.meta || "") + " " + (c.cat || "")).toLowerCase().includes(q)) : byMode;
         return {
           ...shared,
           courses: filtered,
@@ -1732,6 +1747,14 @@ class Component extends DCLogic {
           hasSearch: !!q,
           noResults: !!q && filtered.length === 0,
           clearSearch,
+          courseMode: mode,
+          isInstructorMode: mode === "instructor",
+          instructorColor: mode === "instructor" ? "#600C90" : "#8A7F99",
+          instructorBorder: mode === "instructor" ? "#600C90" : "transparent",
+          selfColor: mode === "self" ? "#600C90" : "#8A7F99",
+          selfBorder: mode === "self" ? "#600C90" : "transparent",
+          setInstructorMode: () => this.setState({ courseMode: "instructor" }),
+          setSelfMode: () => this.setState({ courseMode: "self" }),
           paths: [
             { emoji: "🎨", iconbg: "#FFF1D6", title: "Graphics Designer", body: "Master design tools, branding and layout, then build a client-ready portfolio.", courses: "5 courses", length: "3 months" },
             { emoji: "💻", iconbg: "#F1E4FB", title: "Web Developer", body: "Go from HTML basics to building and deploying full responsive websites.", courses: "6 courses", length: "4 months" },
